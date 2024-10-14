@@ -1,0 +1,52 @@
+\hypertarget{ReadFiles_8h_source}{}\doxysection{Read\+Files.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00002}00002 \textcolor{comment}{// Created by miguel-\/duarte on 01-\/11-\/2023.}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef UNTITLED\_READFILES\_H}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00006}00006 \textcolor{preprocessor}{\#define UNTITLED\_READFILES\_H}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}UC.h"{}}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}Class.h"{}}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00010}00010 \textcolor{preprocessor}{\#include "{}Request.h"{}}}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00012}\mbox{\hyperlink{classReadFiles}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{classReadFiles}{ReadFiles}} \{}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00013}00013 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00014}00014     vector<UC> ucS;}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00015}00015     vector<Class> classes;}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00016}00016     vector<Student> students;}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00017}00017     vector<Request> requests;}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00018}00018 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00019}00019     \textcolor{keywordtype}{void} class\_per\_uc\_reader();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00020}00020     \textcolor{keywordtype}{void} \mbox{\hyperlink{classReadFiles_ae3addaea2f21f02c3d6b50785d277871}{classes\_reader}}();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00021}00021     \textcolor{keywordtype}{void} \mbox{\hyperlink{classReadFiles_ae2788a9a27c7e2fe4f10b746d58412b4}{students\_classes\_reader}}();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00022}00022     vector<UC> getUcs();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00023}00023     \mbox{\hyperlink{classUC}{UC}}\& getUC(\textcolor{keywordtype}{string} ucName);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00024}00024     vector<Student> getStudents();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00025}00025     \mbox{\hyperlink{classStudent}{Student}}\& getStudent(\textcolor{keywordtype}{string} up);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00026}00026     \textcolor{keywordtype}{bool} hasClass(\textcolor{keywordtype}{string} classCode);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00027}00027     \mbox{\hyperlink{classClass}{Class}}\& getClass(\textcolor{keywordtype}{string} classCode);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00028}00028     vector<Class>\& getClasses();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00029}00029     vector<Lesson> lessonsForStudent(\mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00030}00030     \textcolor{keywordtype}{void} setYearStudents();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00031}00031     vector<Lesson> sortLessonsByDay(vector<Lesson> lessons);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00032}00032     \textcolor{keywordtype}{void} createClasses();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00033}00033     vector<Class> getClassChances(\textcolor{keywordtype}{string} uc, \textcolor{keywordtype}{string} currentClass, \mbox{\hyperlink{classStudent}{Student}} student, \textcolor{keywordtype}{bool} addUC = \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00034}00034     vector<Class> getClassChances(\textcolor{keywordtype}{string} oldUC, \textcolor{keywordtype}{string} oldClass, \textcolor{keywordtype}{string} newUC, \mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00035}00035     \textcolor{keywordtype}{bool} lessonsOverlap(\mbox{\hyperlink{classLesson}{Lesson}} l1, \mbox{\hyperlink{classLesson}{Lesson}} l2);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00036}00036     \textcolor{keywordtype}{int} max\_(vector<Class> classes);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00037}00037     \textcolor{keywordtype}{int} min\_(vector<Class> classes);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00038}00038     \textcolor{keywordtype}{void} \mbox{\hyperlink{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}{changeClass}}(\mbox{\hyperlink{classClass}{Class}} old, \mbox{\hyperlink{classClass}{Class}} new\_, \textcolor{keywordtype}{string} uc, \mbox{\hyperlink{classStudent}{Student}} student, \textcolor{keywordtype}{bool} addToLog);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00039}00039     \textcolor{keywordtype}{void} addUC(\mbox{\hyperlink{classUC}{UC}} new\_, \mbox{\hyperlink{classClass}{Class}} newClass, \mbox{\hyperlink{classStudent}{Student}} student, \textcolor{keywordtype}{bool} addToLog);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00040}00040     \textcolor{keywordtype}{void} removeUC(\mbox{\hyperlink{classUC}{UC}} old\_, \mbox{\hyperlink{classClass}{Class}} oldClass, \mbox{\hyperlink{classStudent}{Student}} student, \textcolor{keywordtype}{bool} addToLog);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00041}00041     \textcolor{keywordtype}{void} changeUC(\mbox{\hyperlink{classUC}{UC}} old\_, \mbox{\hyperlink{classClass}{Class}} oldclass, \mbox{\hyperlink{classUC}{UC}} new\_, \mbox{\hyperlink{classClass}{Class}} newClass, \mbox{\hyperlink{classStudent}{Student}} student, \textcolor{keywordtype}{bool} addToLog);}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00042}00042     \textcolor{keywordtype}{void} loadRequests();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00043}00043     vector<Request>\& getRequests();}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00044}00044 \};}
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{ReadFiles_8h_source_l00047}00047 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_READFILES\_H}}
+
+\end{DoxyCode}

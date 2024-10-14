@@ -1,0 +1,58 @@
+\hypertarget{Lesson_8h_source}{}\doxysection{Lesson.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00002}00002 \textcolor{comment}{// Created by Diogo Sousa on 25/10/2023.}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef UNTITLED\_LESSON\_H}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00006}00006 \textcolor{preprocessor}{\#define UNTITLED\_LESSON\_H}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}Student.h"{}}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00011}00011 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00013}00013 \textcolor{keyword}{enum} week \{ Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday \};}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00015}\mbox{\hyperlink{classLesson}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classLesson}{Lesson}} \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00016}00016 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00017}00017     \textcolor{keywordtype}{string} classCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00018}00018     \textcolor{keywordtype}{string} ucCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00019}00019     \textcolor{keywordtype}{string} type;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00020}00020     \textcolor{keywordtype}{double} Duration;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00021}00021     \textcolor{keywordtype}{double} StartHour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00022}00022     \textcolor{keywordtype}{double} endHour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00023}00023     \textcolor{keywordtype}{string} day;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00024}00024     week day\_;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00025}00025     \textcolor{keywordtype}{int} cap;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00026}00026     \textcolor{keywordtype}{int} maxCap = 30;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00027}00027     vector<Student> students;}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00029}00029     \mbox{\hyperlink{classLesson}{Lesson}}(\textcolor{keywordtype}{string} classCode);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00030}00030     \mbox{\hyperlink{classLesson}{Lesson}}(\textcolor{keywordtype}{string} classCode, \textcolor{keywordtype}{string} ucCode, \textcolor{keywordtype}{string} type, \textcolor{keywordtype}{string} weekday, \textcolor{keywordtype}{double} duration, \textcolor{keywordtype}{double} startHour);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00031}00031     week convert(\textcolor{keywordtype}{string} day);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00032}00032     \textcolor{keywordtype}{void} printCode();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00033}00033     \textcolor{keywordtype}{void} setType (\textcolor{keywordtype}{string} type);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00034}00034     \textcolor{keywordtype}{string} getType();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00035}00035     \textcolor{keywordtype}{void} setDuration(\textcolor{keywordtype}{double} duration);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00036}00036     \textcolor{keywordtype}{void} setStartHour(\textcolor{keywordtype}{double} starthour);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00037}00037     \textcolor{keywordtype}{void} setEndHour();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00038}00038     \textcolor{keywordtype}{void} setDay(\textcolor{keywordtype}{string} day);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00039}00039     \textcolor{keywordtype}{string} getDay();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00040}00040     week getDay\_();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00041}00041     \textcolor{keywordtype}{double} getDuration();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00042}00042     \textcolor{keywordtype}{double} getStartHour();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00043}00043     \textcolor{keywordtype}{double} getEndHour();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00044}00044     \textcolor{keywordtype}{string} getClasscode();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00045}00045     \textcolor{keywordtype}{string} getUcCode();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00046}00046     \textcolor{keywordtype}{int} getMaxCap();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00047}00047     \textcolor{keywordtype}{bool} operator== (\textcolor{keyword}{const} \mbox{\hyperlink{classLesson}{Lesson}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00048}00048     vector<Student>\& getStudents();}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00049}00049     \textcolor{keywordtype}{void} addStudent(\mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00050}00050     \textcolor{keywordtype}{void} removeStudent(\mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00051}00051 \};}
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{Lesson_8h_source_l00053}00053 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,21 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}UC.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}ReadFiles.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include "{}Interface.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007 \textcolor{keywordtype}{int} main() \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008     \mbox{\hyperlink{classReadFiles}{ReadFiles}} dataReader;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009     \mbox{\hyperlink{classInterface}{Interface}} interface(dataReader);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010     dataReader.\mbox{\hyperlink{classReadFiles_ae3addaea2f21f02c3d6b50785d277871}{classes\_reader}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011     dataReader.\mbox{\hyperlink{classReadFiles_ae2788a9a27c7e2fe4f10b746d58412b4}{students\_classes\_reader}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012     dataReader.createClasses(); \textcolor{comment}{// cria turmas com o q extraiu}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013     dataReader.loadRequests();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014     interface.mainMenu();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016 \}}
+
+\end{DoxyCode}

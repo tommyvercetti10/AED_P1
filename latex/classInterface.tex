@@ -1,0 +1,870 @@
+\hypertarget{classInterface}{}\doxysection{Interface Class Reference}
+\label{classInterface}\index{Interface@{Interface}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInterface_a5732ccd2386f8033c8587c27e4170cda}{Interface}} (\mbox{\hyperlink{classReadFiles}{Read\+Files}} \&rf\+\_\+)
+\item 
+void \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Programme menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_ae976c5b324492b18e22a46c04dccb927}{schedule\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Menu for Schedule. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a244c3a43dd1ad198b202ad07d3d2d1e7}{set\+Read\+Files}} (\mbox{\hyperlink{classReadFiles}{Read\+Files}} \&rf)
+\item 
+void \mbox{\hyperlink{classInterface_a0db91b8f8d2184ec458b3a68ffc19583}{information}} ()
+\item 
+void \mbox{\hyperlink{classInterface_a05a612179bd9cf626a3f7cb0571e4a16}{UCInformation}} ()
+\item 
+void \mbox{\hyperlink{classInterface_ac7323c354fc502152d1f7cbda820c2e4}{Lesson\+Information}} ()
+\item 
+void \mbox{\hyperlink{classInterface_aff4d5cdafc6fe54d8ac535e6e568b76d}{year\+Information}} ()
+\item 
+void \mbox{\hyperlink{classInterface_a5752bd43b4e2c7393a1abdafd83f67c8}{requests\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Menu for requests. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}} ()
+\item 
+string \mbox{\hyperlink{classInterface_a43054c2dac6155ae4e3d9f677b2097ef}{Hoursto\+String}} (double hour)
+\item 
+void \mbox{\hyperlink{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}{print\+Schedule}} (vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ sorted, bool show\+UC, bool show\+Class)
+\begin{DoxyCompactList}\small\item\em Function that prints Schedules. This function receives information about lessons and organises it in chronological order so that it is easy to read and interpret. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInterface_a7208873db10749edd8cc4342b86a64ef}{Back\+Main\+Menu}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Interface_8h_source_l00010}{10}} of file \mbox{\hyperlink{Interface_8h_source}{Interface.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInterface_a5732ccd2386f8033c8587c27e4170cda}\label{classInterface_a5732ccd2386f8033c8587c27e4170cda}} 
+\index{Interface@{Interface}!Interface@{Interface}}
+\index{Interface@{Interface}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{Interface()}{Interface()}}
+{\footnotesize\ttfamily Interface\+::\+Interface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReadFiles}{Read\+Files}} \&}]{rf\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020 : rf(rf\_) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInterface_a7208873db10749edd8cc4342b86a64ef}\label{classInterface_a7208873db10749edd8cc4342b86a64ef}} 
+\index{Interface@{Interface}!BackMainMenu@{BackMainMenu}}
+\index{BackMainMenu@{BackMainMenu}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{BackMainMenu()}{BackMainMenu()}}
+{\footnotesize\ttfamily void Interface\+::\+Back\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00684}{684}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00684                              \{}
+\DoxyCodeLine{00685     \textcolor{keywordtype}{string} button;}
+\DoxyCodeLine{00686     cout << \textcolor{stringliteral}{"{}\(\backslash\)nPress E to return to the main menu:  "{}};}
+\DoxyCodeLine{00687     cin >> button;}
+\DoxyCodeLine{00688     \textcolor{keywordflow}{if} (button == \textcolor{stringliteral}{"{}E"{}}) \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{mainMenu}}();}
+\DoxyCodeLine{00689 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a43054c2dac6155ae4e3d9f677b2097ef}\label{classInterface_a43054c2dac6155ae4e3d9f677b2097ef}} 
+\index{Interface@{Interface}!HourstoString@{HourstoString}}
+\index{HourstoString@{HourstoString}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{HourstoString()}{HourstoString()}}
+{\footnotesize\ttfamily string Interface\+::\+Hoursto\+String (\begin{DoxyParamCaption}\item[{double}]{hour }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00675}{675}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00675                                           \{}
+\DoxyCodeLine{00676     \textcolor{keywordtype}{int} IntHour = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(hour);}
+\DoxyCodeLine{00677     \textcolor{keywordtype}{double} DecimalMinutes = (hour -\/ IntHour) * 60;}
+\DoxyCodeLine{00678     \textcolor{keywordtype}{int} IntMin = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(DecimalMinutes);}
+\DoxyCodeLine{00679     \textcolor{keywordtype}{string} StrHour = to\_string(IntHour) + \textcolor{stringliteral}{"{}:"{}} + to\_string(IntMin);}
+\DoxyCodeLine{00680     \textcolor{keywordflow}{if} (IntMin == 0) StrHour += \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00681     \textcolor{keywordflow}{return} StrHour;}
+\DoxyCodeLine{00682 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a0db91b8f8d2184ec458b3a68ffc19583}\label{classInterface_a0db91b8f8d2184ec458b3a68ffc19583}} 
+\index{Interface@{Interface}!information@{information}}
+\index{information@{information}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{information()}{information()}}
+{\footnotesize\ttfamily void Interface\+::information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Information menu.
+
+This calls up the functions for information about the UCs, years and lessons. Information about students is read and printed here. 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135                             \{}
+\DoxyCodeLine{00136     cout << \textcolor{stringliteral}{"{}==========╬ Informations ╬==========\(\backslash\)n"{}};}
+\DoxyCodeLine{00137     cout << \textcolor{stringliteral}{"{}1. -\/-\/ About a UC\(\backslash\)n"{}};}
+\DoxyCodeLine{00138     cout << \textcolor{stringliteral}{"{}2. -\/-\/ About a Lesson\(\backslash\)n"{}};}
+\DoxyCodeLine{00139     cout << \textcolor{stringliteral}{"{}3. -\/-\/ About a Year\(\backslash\)n"{}};}
+\DoxyCodeLine{00140     cout << \textcolor{stringliteral}{"{}4. -\/-\/ About a Student\(\backslash\)n"{}};}
+\DoxyCodeLine{00141     cout << \textcolor{stringliteral}{"{}5. Go Back\(\backslash\)n"{}};}
+\DoxyCodeLine{00142     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00143     \textcolor{keywordtype}{int} option, ucsNumber;}
+\DoxyCodeLine{00144     \textcolor{keywordtype}{string} studentUP, studentName;}
+\DoxyCodeLine{00145     vector<pair<string,string>> student\_classes;}
+\DoxyCodeLine{00146     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00147         cin >> option;}
+\DoxyCodeLine{00148         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00149             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00150                 \mbox{\hyperlink{classInterface_a05a612179bd9cf626a3f7cb0571e4a16}{UCInformation}}();}
+\DoxyCodeLine{00151                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00152             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00153                 \mbox{\hyperlink{classInterface_ac7323c354fc502152d1f7cbda820c2e4}{LessonInformation}}();}
+\DoxyCodeLine{00154                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00155             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00156                 \mbox{\hyperlink{classInterface_aff4d5cdafc6fe54d8ac535e6e568b76d}{yearInformation}}();}
+\DoxyCodeLine{00157                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00159                 cout << \textcolor{stringliteral}{"{}Write the number of the Student:  "{}};}
+\DoxyCodeLine{00160                 cin >> studentUP;}
+\DoxyCodeLine{00161                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00162                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp())}
+\DoxyCodeLine{00163                     \{}
+\DoxyCodeLine{00164                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00165                         ucsNumber = rf.getStudents()[i].getUcsNumber();}
+\DoxyCodeLine{00166                         student\_classes = rf.getStudents()[i].getStudent\_classes();}
+\DoxyCodeLine{00167                     \}}
+\DoxyCodeLine{00168                 \}}
+\DoxyCodeLine{00169                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}Informations about "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{charliteral}{')'} + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00170                 cout << \textcolor{stringliteral}{"{}-\/ Enrolled in "{}} << ucsNumber << \textcolor{stringliteral}{"{} UCs. -\/> "{}};}
+\DoxyCodeLine{00171                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00172                     cout << student\_classes[i].first;}
+\DoxyCodeLine{00173                     \textcolor{keywordflow}{if} (i != student\_classes.size() -\/ 1) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00174                 \}}
+\DoxyCodeLine{00175                 cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00176                 BackMainMenu();}
+\DoxyCodeLine{00177                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178             \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{00179                 \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{mainMenu}}();}
+\DoxyCodeLine{00180                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181         \}}
+\DoxyCodeLine{00182     \} \textcolor{keywordflow}{while} (option != 6);}
+\DoxyCodeLine{00183 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_ac7323c354fc502152d1f7cbda820c2e4}\label{classInterface_ac7323c354fc502152d1f7cbda820c2e4}} 
+\index{Interface@{Interface}!LessonInformation@{LessonInformation}}
+\index{LessonInformation@{LessonInformation}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{LessonInformation()}{LessonInformation()}}
+{\footnotesize\ttfamily void Interface\+::\+Lesson\+Information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Allows you to see the students in a lesson 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00258}{258}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00258                                  \{}
+\DoxyCodeLine{00259     \textcolor{keywordtype}{int} option, ucnumber, lessonnumber;}
+\DoxyCodeLine{00260     \textcolor{keywordtype}{string} uc, lesson;}
+\DoxyCodeLine{00261     cout << \textcolor{stringliteral}{"{}1. Lesson's Students \(\backslash\)n"{}};}
+\DoxyCodeLine{00262     \textcolor{comment}{//cout << "{}2"{} ....}}
+\DoxyCodeLine{00263     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00264     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00265         cin >> option;}
+\DoxyCodeLine{00266         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00267             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00268                 uc = \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}}();}
+\DoxyCodeLine{00269                 cin >> ucnumber;}
+\DoxyCodeLine{00270                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < rf.getUcs()[ucnumber-\/1].getLessons().size(); j++) \{}
+\DoxyCodeLine{00271                     cout << j+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getUcs()[ucnumber-\/1].getLessons()[j].getDay() << \textcolor{stringliteral}{"{}:"{}} <<rf.getUcs()[ucnumber-\/1].getLessons()[j].getClasscode() << \textcolor{stringliteral}{"{}-\/"{}} << rf.getUcs()[ucnumber-\/1].getLessons()[j].getType()<< \textcolor{stringliteral}{"{}   "{}};}
+\DoxyCodeLine{00272                 \}}
+\DoxyCodeLine{00273                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose a Lesson: "{}};}
+\DoxyCodeLine{00274                 cin >> lessonnumber;}
+\DoxyCodeLine{00275                 cout << \textcolor{stringliteral}{"{}This Lesson has "{}} << rf.getUcs()[ucnumber-\/1].getLessons()[lessonnumber-\/1].getStudents().size() << \textcolor{stringliteral}{"{} students.\(\backslash\)n"{}};}
+\DoxyCodeLine{00276                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k < rf.getUcs()[ucnumber-\/1].getLessons()[lessonnumber-\/1].getStudents().size(); k++)\{}
+\DoxyCodeLine{00277                     cout << rf.getUcs()[ucnumber-\/1].getLessons()[lessonnumber-\/1].getStudents()[k].getUp() << \textcolor{stringliteral}{"{} -\/ "{}} << rf.getUcs()[ucnumber-\/1].getLessons()[lessonnumber-\/1].getStudents()[k].getName() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00278                 \}}
+\DoxyCodeLine{00279                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n1. Go Back"{}} << \textcolor{charliteral}{'\(\backslash\)n'} << \textcolor{stringliteral}{"{}2. Exit"{}};}
+\DoxyCodeLine{00280                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose an option: "{}};}
+\DoxyCodeLine{00281                 cin >> option;}
+\DoxyCodeLine{00282             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00283                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00284             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00285                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00286         \}}
+\DoxyCodeLine{00287     \}\textcolor{keywordflow}{while}(option != 5);}
+\DoxyCodeLine{00288 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}\label{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}} 
+\index{Interface@{Interface}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
+{\footnotesize\ttfamily void Interface\+::main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programme menu. 
+
+This function is the starting point for obtaining the programme\textquotesingle{}s features. It calls up the function for consulting Schedules, the one for obtaining information on students, years and \mbox{\hyperlink{classUC}{UC}}\textquotesingle{}s and the Requests menu. 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030                          \{}
+\DoxyCodeLine{00031     \textcolor{keywordtype}{string} uc, button;}
+\DoxyCodeLine{00032     cout << \textcolor{stringliteral}{"{}============╬ Menu ╬============\(\backslash\)n"{}};}
+\DoxyCodeLine{00033     cout << \textcolor{stringliteral}{"{}1. Schedules\(\backslash\)n"{}};}
+\DoxyCodeLine{00034     cout << \textcolor{stringliteral}{"{}2. Information\(\backslash\)n"{}};}
+\DoxyCodeLine{00035     cout << \textcolor{stringliteral}{"{}3. Requests\(\backslash\)n"{}};}
+\DoxyCodeLine{00036     cout << \textcolor{stringliteral}{"{}4. Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{00037     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00038     \textcolor{keywordtype}{int} option;}
+\DoxyCodeLine{00039     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00040         cin >> option;}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00042             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00043                 \mbox{\hyperlink{classInterface_ae976c5b324492b18e22a46c04dccb927}{scheduleMenu}}();}
+\DoxyCodeLine{00044                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00046                 \mbox{\hyperlink{classInterface_a0db91b8f8d2184ec458b3a68ffc19583}{information}}();}
+\DoxyCodeLine{00047                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00048             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00049                 \mbox{\hyperlink{classInterface_a5752bd43b4e2c7393a1abdafd83f67c8}{requestsMenu}}();}
+\DoxyCodeLine{00050                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00052                 cout << \textcolor{stringliteral}{"{}Leaving the program, Thank you!\(\backslash\)n"{}};}
+\DoxyCodeLine{00053                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00055                 cout << \textcolor{stringliteral}{"{}Invalid Option. Try Again.\(\backslash\)n"{}};}
+\DoxyCodeLine{00056         \}}
+\DoxyCodeLine{00057     \} \textcolor{keywordflow}{while}(option != 4);}
+\DoxyCodeLine{00058 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}\label{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}} 
+\index{Interface@{Interface}!printSchedule@{printSchedule}}
+\index{printSchedule@{printSchedule}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{printSchedule()}{printSchedule()}}
+{\footnotesize\ttfamily void Interface\+::print\+Schedule (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$}]{sorted,  }\item[{bool}]{show\+UC,  }\item[{bool}]{show\+Class }\end{DoxyParamCaption})}
+
+
+
+Function that prints Schedules. This function receives information about lessons and organises it in chronological order so that it is easy to read and interpret. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorted} & Lessons \\
+\hline
+{\em show\+UC} & \\
+\hline
+{\em show\+Class} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00647}{647}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00647                                                                                 \{}
+\DoxyCodeLine{00648     \textcolor{keywordtype}{int} day = 0;}
+\DoxyCodeLine{00649     \textcolor{keywordflow}{while} (day != 7) \{}
+\DoxyCodeLine{00650         cout << \textcolor{charliteral}{'\(\backslash\)n'} << \textcolor{stringliteral}{"{}================ "{}} << index\_to\_string[day] << \textcolor{stringliteral}{"{} ================"{}} << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00651         \textcolor{keywordflow}{if} (showUC) cout << \textcolor{stringliteral}{"{} UC             "{}};}
+\DoxyCodeLine{00652         \textcolor{keywordflow}{if} (showClass) cout << \textcolor{stringliteral}{"{} Class          "{}};}
+\DoxyCodeLine{00653         cout <<\textcolor{stringliteral}{"{} Time             "{}};}
+\DoxyCodeLine{00654         cout <<\textcolor{stringliteral}{"{} Type     \(\backslash\)n"{}};}
+\DoxyCodeLine{00655         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < sorted.size(); i++) \{}
+\DoxyCodeLine{00656             \textcolor{keywordflow}{if} (sorted[i].getDay\_() == day) \{}
+\DoxyCodeLine{00657                 \textcolor{keywordflow}{if} (showUC) \{}
+\DoxyCodeLine{00658                     \textcolor{keywordtype}{string} spaces(15 -\/ sorted[i].getUcCode().size(), \textcolor{charliteral}{' '});}
+\DoxyCodeLine{00659                     cout << \textcolor{stringliteral}{"{} "{}} << sorted[i].getUcCode() << spaces;}
+\DoxyCodeLine{00660                 \}}
+\DoxyCodeLine{00661                 \textcolor{keywordflow}{if} (showClass) \{}
+\DoxyCodeLine{00662                     \textcolor{keywordtype}{string} spaces( 15-\/ sorted[i].getClasscode().size(), \textcolor{charliteral}{' '});}
+\DoxyCodeLine{00663                     cout << \textcolor{stringliteral}{"{} "{}} << sorted[i].getClasscode() << spaces;}
+\DoxyCodeLine{00664                 \}}
+\DoxyCodeLine{00665                 \textcolor{keywordtype}{string} EndHour = HourstoString(sorted[i].getStartHour() + sorted[i].getDuration());}
+\DoxyCodeLine{00666                 \textcolor{keywordtype}{string} spaces( 16-\/ HourstoString(sorted[i].getStartHour()).size() -\/ EndHour.size(), \textcolor{charliteral}{' '});}
+\DoxyCodeLine{00667                 cout << \textcolor{stringliteral}{"{} "{}} << HourstoString(sorted[i].getStartHour()) << \textcolor{stringliteral}{"{}-\/"{}} << EndHour << spaces;}
+\DoxyCodeLine{00668                 cout << \textcolor{stringliteral}{"{} "{}} << sorted[i].getType() <<\textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00669             \}}
+\DoxyCodeLine{00670         \}}
+\DoxyCodeLine{00671         day++;}
+\DoxyCodeLine{00672     \}}
+\DoxyCodeLine{00673 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a5752bd43b4e2c7393a1abdafd83f67c8}\label{classInterface_a5752bd43b4e2c7393a1abdafd83f67c8}} 
+\index{Interface@{Interface}!requestsMenu@{requestsMenu}}
+\index{requestsMenu@{requestsMenu}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{requestsMenu()}{requestsMenu()}}
+{\footnotesize\ttfamily void Interface\+::requests\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Menu for requests. 
+
+This function allows students to change their classes and UCs, as well as enter a \mbox{\hyperlink{classUC}{UC}} if they don\textquotesingle{}t exceed the maximum limit. A record of all changes is also kept here, so that you can go back on your decision. 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00335}{335}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00335                              \{}
+\DoxyCodeLine{00336     cout << \textcolor{stringliteral}{"{}===========╬ Requests ╬===========\(\backslash\)n"{}};}
+\DoxyCodeLine{00337     cout << \textcolor{stringliteral}{"{}1. -\/-\/ Class Change\(\backslash\)n"{}};}
+\DoxyCodeLine{00338     cout << \textcolor{stringliteral}{"{}2. -\/-\/ UC Change\(\backslash\)n"{}};}
+\DoxyCodeLine{00339     cout << \textcolor{stringliteral}{"{}3. -\/-\/ UC Add\(\backslash\)n"{}};}
+\DoxyCodeLine{00340     cout << \textcolor{stringliteral}{"{}4. -\/-\/ UC Remove\(\backslash\)n"{}};}
+\DoxyCodeLine{00341     cout << \textcolor{stringliteral}{"{}5. Log Status\(\backslash\)n"{}};}
+\DoxyCodeLine{00342     cout << \textcolor{stringliteral}{"{}6. Go Back\(\backslash\)n"{}};}
+\DoxyCodeLine{00343     cout << \textcolor{stringliteral}{"{}7. Exit\(\backslash\)n"{}};}
+\DoxyCodeLine{00344     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00345     \textcolor{keywordtype}{int} option, ucsNumber, ucNumber, classNumber, prevUcNumber;}
+\DoxyCodeLine{00346     \textcolor{keywordtype}{string} studentUP, studentName, uc, class\_, studentYear, prevUC;}
+\DoxyCodeLine{00347     vector<pair<string,string>> student\_classes;}
+\DoxyCodeLine{00348     vector<Lesson> ucLessons;}
+\DoxyCodeLine{00349     vector<UC> UCchances;}
+\DoxyCodeLine{00350     vector<Class> classes;}
+\DoxyCodeLine{00351     \mbox{\hyperlink{classStudent}{Student}} student(\textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00352     \mbox{\hyperlink{classRequest}{Request}} request(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00353     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00354         cin >> option;}
+\DoxyCodeLine{00355         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00356             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00357                 cout << \textcolor{stringliteral}{"{}Write the number of the Student:  "{}};}
+\DoxyCodeLine{00358                 cin >> studentUP;}
+\DoxyCodeLine{00359                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00360                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp())}
+\DoxyCodeLine{00361                     \{}
+\DoxyCodeLine{00362                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00363                         ucsNumber = rf.getStudents()[i].getUcsNumber();}
+\DoxyCodeLine{00364                         student\_classes = rf.getStudents()[i].getStudent\_classes();}
+\DoxyCodeLine{00365                         student = rf.getStudents()[i];}
+\DoxyCodeLine{00366                     \}}
+\DoxyCodeLine{00367                 \}}
+\DoxyCodeLine{00368                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}Class change for "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{charliteral}{')'} + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00369                 cout << \textcolor{stringliteral}{"{}-\/ Enrolled in "{}} << ucsNumber << \textcolor{stringliteral}{"{} UCs. -\/> "{}};}
+\DoxyCodeLine{00370                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00371                     cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << student\_classes[i].first;}
+\DoxyCodeLine{00372                     \textcolor{keywordflow}{if} (i != student\_classes.size() -\/ 1) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00373                 \}}
+\DoxyCodeLine{00374                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose the UC:  "{}};}
+\DoxyCodeLine{00375                 cin >> ucNumber;}
+\DoxyCodeLine{00376                 uc = student\_classes[ucNumber -\/ 1].first;}
+\DoxyCodeLine{00377                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00378                     \textcolor{keywordflow}{if} (student\_classes[i].first == uc) class\_ = student\_classes[i].second;}
+\DoxyCodeLine{00379                 \}}
+\DoxyCodeLine{00380                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/ Currently -\/> Class: "{}} << class\_ + \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00381                 classes = rf.getClassChances(uc, class\_, student);}
+\DoxyCodeLine{00382                 \textcolor{keywordflow}{if} (!classes.empty()) \{}
+\DoxyCodeLine{00383                     cout << \textcolor{stringliteral}{"{}-\/-\/ Possible Changes: \(\backslash\)n"{}};}
+\DoxyCodeLine{00384                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00385                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << \textcolor{stringliteral}{"{}Class: "{}} << classes[i].getClassCode() << \textcolor{stringliteral}{"{} -\/ Students: "{}} << classes[i].getLessons()[0].getStudents().size() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00386                     \}}
+\DoxyCodeLine{00387                     cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose the Class:  "{}};}
+\DoxyCodeLine{00388                     cin >> classNumber;}
+\DoxyCodeLine{00389                     rf.\mbox{\hyperlink{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}{changeClass}}(rf.getClass(class\_), classes[classNumber -\/ 1], uc, student, \textcolor{keyword}{true});}
+\DoxyCodeLine{00390                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== CHANGE SUCCESSFUL =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00391                     cout << \textcolor{stringliteral}{"{}The student "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{stringliteral}{"{}) "{}}}
+\DoxyCodeLine{00392                             + \textcolor{stringliteral}{"{}changed the class of the UC "{}} + uc + \textcolor{stringliteral}{"{} from "{}} + rf.getClass(class\_) .getClassCode() +}
+\DoxyCodeLine{00393                             \textcolor{stringliteral}{"{} to "{}} + classes[classNumber -\/ 1].getClassCode() + \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00394                 \}}
+\DoxyCodeLine{00395                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}-\/ It was not possible to find a compatible change. Try other UC!\(\backslash\)n"{}};}
+\DoxyCodeLine{00396                 BackMainMenu();}
+\DoxyCodeLine{00397                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00398             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00399                 cout << \textcolor{stringliteral}{"{}Write the number of the Student: "{}};}
+\DoxyCodeLine{00400                 cin >> studentUP;}
+\DoxyCodeLine{00401                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00402                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp()) \{}
+\DoxyCodeLine{00403                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00404                         ucsNumber = rf.getStudents()[i].getUcsNumber();}
+\DoxyCodeLine{00405                         student\_classes = rf.getStudents()[i].getStudent\_classes();}
+\DoxyCodeLine{00406                         student = rf.getStudents()[i];}
+\DoxyCodeLine{00407                     \}}
+\DoxyCodeLine{00408                 \}}
+\DoxyCodeLine{00409                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}UC change for "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{stringliteral}{"{})"{}} + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00410                 cout << \textcolor{stringliteral}{"{}-\/ Enrolled in "{}} << ucsNumber << \textcolor{stringliteral}{"{} UCs. -\/> "{}};}
+\DoxyCodeLine{00411                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00412                     cout << i + 1 << \textcolor{stringliteral}{"{}. "{}} << student\_classes[i].first;}
+\DoxyCodeLine{00413                     \textcolor{keywordflow}{if} (i != student\_classes.size() -\/ 1) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00414                 \}}
+\DoxyCodeLine{00415                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nChoose the UC that you want to change: "{}};}
+\DoxyCodeLine{00416                 cin >> prevUcNumber;}
+\DoxyCodeLine{00417                 prevUC = student\_classes[prevUcNumber -\/ 1].first;}
+\DoxyCodeLine{00418                 UCchances = rf.getUcs();}
+\DoxyCodeLine{00419                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < UCchances.size(); i++) \{}
+\DoxyCodeLine{00420                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < student\_classes.size(); j++) \{}
+\DoxyCodeLine{00421                         \textcolor{keywordflow}{if} (UCchances[i].getUCname() == student\_classes[j].first) \{}
+\DoxyCodeLine{00422                             UCchances.erase(UCchances.begin() + i);}
+\DoxyCodeLine{00423                         \}}
+\DoxyCodeLine{00424                         \textcolor{comment}{//cout << student\_classes[j].first << '\(\backslash\)n';}}
+\DoxyCodeLine{00425                     \}}
+\DoxyCodeLine{00426                 \}}
+\DoxyCodeLine{00427                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n-\/ Possible UCs to change: \(\backslash\)n"{}};}
+\DoxyCodeLine{00428                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x= 0; x < UCchances.size(); x++) \{}
+\DoxyCodeLine{00429                     cout << x+1 << \textcolor{stringliteral}{"{}. "{}} << UCchances[x].getUCname();}
+\DoxyCodeLine{00430                     \textcolor{keywordflow}{if} (x != UCchances.size() -\/ 1 \&\& x!= UCchances.size() / 2) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00431                     \textcolor{keywordflow}{if} (x == UCchances.size() / 2) cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00432                 \}}
+\DoxyCodeLine{00433                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nChoose the UC:  "{}};}
+\DoxyCodeLine{00434                 cin >> ucNumber;}
+\DoxyCodeLine{00435                 uc = UCchances[ucNumber -\/ 1].getUCname();}
+\DoxyCodeLine{00436                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00437                     \textcolor{keywordflow}{if} (student\_classes[i].first == prevUC) class\_ = student\_classes[i].second;}
+\DoxyCodeLine{00438                 \}}
+\DoxyCodeLine{00439                 classes = rf.getClassChances(prevUC, class\_, uc, student);}
+\DoxyCodeLine{00440                 \textcolor{keywordflow}{if} (!classes.empty()) \{}
+\DoxyCodeLine{00441                     cout << \textcolor{stringliteral}{"{}-\/-\/ Possible Classes: \(\backslash\)n"{}};}
+\DoxyCodeLine{00442                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00443                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << \textcolor{stringliteral}{"{}Class: "{}} << classes[i].getClassCode() << \textcolor{stringliteral}{"{} -\/ Students: "{}} << classes[i].getLessons()[0].getStudents().size() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00444                     \}}
+\DoxyCodeLine{00445                     cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose the Class:  "{}};}
+\DoxyCodeLine{00446                     cin >> classNumber;}
+\DoxyCodeLine{00447                     rf.changeUC(rf.getUC(prevUC), rf.getClass(class\_), rf.getUC(uc), classes[classNumber -\/ 1], student, \textcolor{keyword}{true});}
+\DoxyCodeLine{00448                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== CHANGE SUCCESSFUL =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00449                     cout << \textcolor{stringliteral}{"{}The student "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{stringliteral}{"{}) "{}}}
+\DoxyCodeLine{00450                             + \textcolor{stringliteral}{"{}changed the UC from "{}} + prevUC + \textcolor{stringliteral}{"{} ("{}} + class\_ + \textcolor{stringliteral}{"{}) "{}} +}
+\DoxyCodeLine{00451                             \textcolor{stringliteral}{"{}to "{}} + uc + \textcolor{stringliteral}{"{} ("{}} + classes[classNumber -\/ 1].getClassCode() + \textcolor{stringliteral}{"{})"{}} + \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00452                 \}}
+\DoxyCodeLine{00453                 \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}-\/ It was not possible to find a compatible change. Try other UC!\(\backslash\)n"{}};}
+\DoxyCodeLine{00454                 BackMainMenu();}
+\DoxyCodeLine{00455                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00456             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00457                 cout << \textcolor{stringliteral}{"{}Write the number of the Student:  "{}};}
+\DoxyCodeLine{00458                 cin >> studentUP;}
+\DoxyCodeLine{00459                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00460                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp()) \{}
+\DoxyCodeLine{00461                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00462                         ucsNumber = rf.getStudents()[i].getUcsNumber();}
+\DoxyCodeLine{00463                         student\_classes = rf.getStudents()[i].getStudent\_classes();}
+\DoxyCodeLine{00464                         student = rf.getStudents()[i];}
+\DoxyCodeLine{00465                         studentYear = rf.getStudents()[i].getYear();}
+\DoxyCodeLine{00466                     \}}
+\DoxyCodeLine{00467                 \}}
+\DoxyCodeLine{00468                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}UC Add for "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{charliteral}{')'} + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00469                 cout << \textcolor{stringliteral}{"{}-\/ Enrolled in "{}} << ucsNumber << \textcolor{stringliteral}{"{} UCs. -\/> "{}};}
+\DoxyCodeLine{00470                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00471                     cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << student\_classes[i].first;}
+\DoxyCodeLine{00472                     \textcolor{keywordflow}{if} (i != student\_classes.size() -\/ 1) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00473                 \}}
+\DoxyCodeLine{00474                 \textcolor{keywordflow}{if} (ucsNumber == 7) \{}
+\DoxyCodeLine{00475                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n-\/ The student cannot enroll in more UC's (reached the maximum of 7 UC's)\(\backslash\)n"{}};}
+\DoxyCodeLine{00476                     BackMainMenu();}
+\DoxyCodeLine{00477                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00478                 \}}
+\DoxyCodeLine{00479                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00480                     UCchances = rf.getUcs();}
+\DoxyCodeLine{00481                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < UCchances.size(); i++) \{}
+\DoxyCodeLine{00482                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < student\_classes.size(); j++) \{}
+\DoxyCodeLine{00483                             \textcolor{keywordflow}{if} (UCchances[i].getUCname() == student\_classes[j].first) \{}
+\DoxyCodeLine{00484                                 UCchances.erase(UCchances.begin() + i);}
+\DoxyCodeLine{00485                             \}}
+\DoxyCodeLine{00486                             \textcolor{comment}{//cout << student\_classes[j].first << '\(\backslash\)n';}}
+\DoxyCodeLine{00487                         \}}
+\DoxyCodeLine{00488                     \}}
+\DoxyCodeLine{00489                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n-\/ Possible UCs to Add: \(\backslash\)n"{}};}
+\DoxyCodeLine{00490                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x= 0; x < UCchances.size(); x++) \{}
+\DoxyCodeLine{00491                         cout << x+1 << \textcolor{stringliteral}{"{}. "{}} << UCchances[x].getUCname();}
+\DoxyCodeLine{00492                         \textcolor{keywordflow}{if} (x != UCchances.size() -\/ 1 \&\& x!= UCchances.size() / 2) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00493                         \textcolor{keywordflow}{if} (x == UCchances.size() / 2) cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00494                     \}}
+\DoxyCodeLine{00495                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nChoose the UC:  "{}};}
+\DoxyCodeLine{00496                     cin >> ucNumber;}
+\DoxyCodeLine{00497                     uc = UCchances[ucNumber -\/ 1].getUCname();}
+\DoxyCodeLine{00498                     classes = rf.getClassChances(uc, \textcolor{stringliteral}{"{}"{}}, student, \textcolor{keyword}{true});}
+\DoxyCodeLine{00499                     \textcolor{keywordflow}{if} (!classes.empty()) \{}
+\DoxyCodeLine{00500                         cout << \textcolor{stringliteral}{"{}-\/-\/ Possible Classes: \(\backslash\)n"{}};}
+\DoxyCodeLine{00501                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00502                             cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << \textcolor{stringliteral}{"{}Class: "{}} << classes[i].getClassCode() << \textcolor{stringliteral}{"{} -\/ Students: "{}} << classes[i].getLessons()[0].getStudents().size() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00503                         \}}
+\DoxyCodeLine{00504                         cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose the Class:  "{}};}
+\DoxyCodeLine{00505                         cin >> classNumber;}
+\DoxyCodeLine{00506                         rf.addUC(uc, classes[classNumber -\/ 1], student, \textcolor{keyword}{true});}
+\DoxyCodeLine{00507                         cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== ADDITION SUCCESSFUL =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00508                         cout << \textcolor{stringliteral}{"{}The student "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{stringliteral}{"{}) "{}}}
+\DoxyCodeLine{00509                                 + \textcolor{stringliteral}{"{}was registered in the UC "{}} + uc +}
+\DoxyCodeLine{00510                                 \textcolor{stringliteral}{"{} in the class "{}} + classes[classNumber -\/ 1].getClassCode() + \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00511                     \}}
+\DoxyCodeLine{00512                     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}-\/ It was not possible to find a compatible change. Try other UC!\(\backslash\)n"{}};}
+\DoxyCodeLine{00513                     BackMainMenu();}
+\DoxyCodeLine{00514                 \}}
+\DoxyCodeLine{00515             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00516                 cout << \textcolor{stringliteral}{"{}Write the number of the Student:  "{}};}
+\DoxyCodeLine{00517                 cin >> studentUP;}
+\DoxyCodeLine{00518                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00519                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp()) \{}
+\DoxyCodeLine{00520                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00521                         ucsNumber = rf.getStudents()[i].getUcsNumber();}
+\DoxyCodeLine{00522                         student\_classes = rf.getStudents()[i].getStudent\_classes();}
+\DoxyCodeLine{00523                         student = rf.getStudents()[i];}
+\DoxyCodeLine{00524                         studentYear = rf.getStudents()[i].getYear();}
+\DoxyCodeLine{00525                     \}}
+\DoxyCodeLine{00526                 \}}
+\DoxyCodeLine{00527                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}UC Remove for "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{charliteral}{')'} + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00528                 cout << \textcolor{stringliteral}{"{}-\/ Enrolled in "{}} << ucsNumber << \textcolor{stringliteral}{"{} UCs. -\/> "{}};}
+\DoxyCodeLine{00529                 \textcolor{keywordflow}{if} (ucsNumber == 0) cout << \textcolor{stringliteral}{"{}-\/ Impossible to remove more UCs. "{}};}
+\DoxyCodeLine{00530                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00531                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00532                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << student\_classes[i].first;}
+\DoxyCodeLine{00533                         \textcolor{keywordflow}{if} (i != student\_classes.size() -\/ 1) cout << \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{00534                     \}}
+\DoxyCodeLine{00535                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)nChoose the UC to remove:  "{}};}
+\DoxyCodeLine{00536                     cin >> ucNumber;}
+\DoxyCodeLine{00537                     uc = student\_classes[ucNumber-\/1].first;}
+\DoxyCodeLine{00538                     class\_ = student\_classes[ucNumber-\/1].second;}
+\DoxyCodeLine{00539                     rf.removeUC(rf.getUC(uc), rf.getClass(class\_), student, \textcolor{keyword}{true});}
+\DoxyCodeLine{00540                     cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== REMOVE SUCCESSFUL =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00541                     cout << \textcolor{stringliteral}{"{}The student "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{stringliteral}{"{}) "{}}}
+\DoxyCodeLine{00542                             + \textcolor{stringliteral}{"{}was removed in the UC "{}} + uc +}
+\DoxyCodeLine{00543                             \textcolor{stringliteral}{"{} in the class "{}} + class\_ + \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{00544                     BackMainMenu();}
+\DoxyCodeLine{00545                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00546                 \}}
+\DoxyCodeLine{00547             \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{00548                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n=============================== "{}} << \textcolor{stringliteral}{"{}Log List"{}} << \textcolor{stringliteral}{"{} ===============================\(\backslash\)n"{}};}
+\DoxyCodeLine{00549                 \textcolor{keywordflow}{if} (rf.getRequests().size()==0)\{}
+\DoxyCodeLine{00550                     cout << \textcolor{stringliteral}{"{}\(\backslash\)nYou haven't done any requests yet."{}};}
+\DoxyCodeLine{00551                     BackMainMenu();}
+\DoxyCodeLine{00552                 \}}
+\DoxyCodeLine{00553                 cout << \textcolor{stringliteral}{"{}      Type        "{}} << \textcolor{stringliteral}{"{} Student        "{}};}
+\DoxyCodeLine{00554                 cout <<\textcolor{stringliteral}{"{}     UC                  "{}} << \textcolor{stringliteral}{"{} Class                  \(\backslash\)n"{}};}
+\DoxyCodeLine{00555                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< rf.getRequests().size(); i++)\{}
+\DoxyCodeLine{00556                     \textcolor{keywordflow}{if} (rf.getRequests()[i].getType() == \textcolor{stringliteral}{"{}UCChange"{}}) \{}
+\DoxyCodeLine{00557                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getRequests()[i].getType() << \textcolor{stringliteral}{"{}       "{}} << rf.getRequests()[i].getStudent().getUp();}
+\DoxyCodeLine{00558                         cout << \textcolor{stringliteral}{"{}    "{}} << rf.getRequests()[i].getOldUC().getUCname()}
+\DoxyCodeLine{00559                              << \textcolor{stringliteral}{"{} -\/> "{}} << rf.getRequests()[i].getNewUC().getUCname();}
+\DoxyCodeLine{00560                         cout << \textcolor{stringliteral}{"{}   "{}} << rf.getRequests()[i].getOldClass().getClassCode()}
+\DoxyCodeLine{00561                              << \textcolor{stringliteral}{"{} -\/> "{}} << rf.getRequests()[i].getNewClass().getClassCode();}
+\DoxyCodeLine{00562                     \}}
+\DoxyCodeLine{00563                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rf.getRequests()[i].getType() == \textcolor{stringliteral}{"{}ClassChange"{}}) \{}
+\DoxyCodeLine{00564                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getRequests()[i].getType() << \textcolor{stringliteral}{"{}    "{}} << rf.getRequests()[i].getStudent().getUp();}
+\DoxyCodeLine{00565                         cout << \textcolor{stringliteral}{"{}         "{}} << rf.getRequests()[i].getUc();}
+\DoxyCodeLine{00566                         cout << \textcolor{stringliteral}{"{}          "{}} << rf.getRequests()[i].getOldClass().getClassCode()}
+\DoxyCodeLine{00567                              << \textcolor{stringliteral}{"{} -\/> "{}} << rf.getRequests()[i].getNewClass().getClassCode();}
+\DoxyCodeLine{00568                     \}}
+\DoxyCodeLine{00569                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rf.getRequests()[i].getType() == \textcolor{stringliteral}{"{}UCAdd"{}}) \{}
+\DoxyCodeLine{00570                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getRequests()[i].getType() << \textcolor{stringliteral}{"{}          "{}} << rf.getRequests()[i].getStudent().getUp();}
+\DoxyCodeLine{00571                         cout << \textcolor{stringliteral}{"{}         "{}} << rf.getRequests()[i].getUc();}
+\DoxyCodeLine{00572                         cout << \textcolor{stringliteral}{"{}               "{}} << rf.getRequests()[i].getNewClass().getClassCode();}
+\DoxyCodeLine{00573                     \}}
+\DoxyCodeLine{00574                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (rf.getRequests()[i].getType() == \textcolor{stringliteral}{"{}UCRemove"{}}) \{}
+\DoxyCodeLine{00575                         cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getRequests()[i].getType() << \textcolor{stringliteral}{"{}       "{}} << rf.getRequests()[i].getStudent().getUp();}
+\DoxyCodeLine{00576                         cout << \textcolor{stringliteral}{"{}         "{}} << rf.getRequests()[i].getOldUC().getUCname();}
+\DoxyCodeLine{00577                         cout << \textcolor{stringliteral}{"{}               "{}} << rf.getRequests()[i].getOldClass().getClassCode();}
+\DoxyCodeLine{00578                     \}}
+\DoxyCodeLine{00579                     cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00580                 \}}
+\DoxyCodeLine{00581                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n1. Undo a Request\(\backslash\)n2. Go Back\(\backslash\)nChoose an Option: "{}};}
+\DoxyCodeLine{00582                 cin >> option;}
+\DoxyCodeLine{00583                 \textcolor{keywordflow}{if}(option==1)\{}
+\DoxyCodeLine{00584                     \textcolor{keywordflow}{if} (rf.getRequests().size() == 0)\{}
+\DoxyCodeLine{00585                         cout << \textcolor{stringliteral}{"{}\(\backslash\)nThere are no requests to undo."{}};}
+\DoxyCodeLine{00586                         BackMainMenu();}
+\DoxyCodeLine{00587                     \}}
+\DoxyCodeLine{00588                     cout << \textcolor{stringliteral}{"{}Choose the Request to undo: "{}};}
+\DoxyCodeLine{00589                     cin >> option;}
+\DoxyCodeLine{00590                     request = rf.getRequests()[option-\/1];}
+\DoxyCodeLine{00591                     \textcolor{keywordflow}{if} (request.getType() == \textcolor{stringliteral}{"{}ClassChange"{}})}
+\DoxyCodeLine{00592                         rf.\mbox{\hyperlink{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}{changeClass}}(request.getNewClass(), request.getOldClass(), request.getUc(), request.getStudent(), \textcolor{keyword}{true});}
+\DoxyCodeLine{00593                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request.getType() == \textcolor{stringliteral}{"{}UCChange"{}})}
+\DoxyCodeLine{00594                         rf.changeUC(request.getNewUC(), request.getNewClass(), request.getOldUC(), request.getOldClass(), request.getStudent(), \textcolor{keyword}{true});}
+\DoxyCodeLine{00595                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request.getType() == \textcolor{stringliteral}{"{}UCAdd"{}})}
+\DoxyCodeLine{00596                         rf.removeUC(request.getNewUC(), request.getNewClass(), request.getStudent(), \textcolor{keyword}{true});}
+\DoxyCodeLine{00597                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (request.getType() == \textcolor{stringliteral}{"{}UCRemove"{}})}
+\DoxyCodeLine{00598                         rf.addUC(request.getOldUC(), request.getOldClass(), request.getStudent(), \textcolor{keyword}{true});}
+\DoxyCodeLine{00599                     cout << \textcolor{stringliteral}{"{}Request done. Moved "{}} << rf.getRequests()[option-\/1].getStudent().getUp() << \textcolor{stringliteral}{"{} in "{}} << rf.getRequests()[option-\/1].getUc()}
+\DoxyCodeLine{00600                          << \textcolor{stringliteral}{"{} from "{}} << rf.getRequests()[option-\/1].getNewClass().getClassCode() << \textcolor{stringliteral}{"{} to "{}} << rf.getRequests()[option-\/1].getOldClass().getClassCode() << \textcolor{stringliteral}{"{} sucessfully!"{}};}
+\DoxyCodeLine{00601                     BackMainMenu();}
+\DoxyCodeLine{00602                 \}}
+\DoxyCodeLine{00603                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(option == 2)\{}
+\DoxyCodeLine{00604                     \mbox{\hyperlink{classInterface_a5752bd43b4e2c7393a1abdafd83f67c8}{requestsMenu}}();}
+\DoxyCodeLine{00605                 \}}
+\DoxyCodeLine{00606                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00607             \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{00608                 \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{mainMenu}}();}
+\DoxyCodeLine{00609                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00610             \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{00611                 cout << \textcolor{stringliteral}{"{}Leaving the program, Thank you!\(\backslash\)n"{}};}
+\DoxyCodeLine{00612                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00613             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00614                 cout << \textcolor{stringliteral}{"{}Invalid Option. Try Again.\(\backslash\)n"{}};}
+\DoxyCodeLine{00615         \}}
+\DoxyCodeLine{00616     \} \textcolor{keywordflow}{while} (option != 7);}
+\DoxyCodeLine{00617 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_ae976c5b324492b18e22a46c04dccb927}\label{classInterface_ae976c5b324492b18e22a46c04dccb927}} 
+\index{Interface@{Interface}!scheduleMenu@{scheduleMenu}}
+\index{scheduleMenu@{scheduleMenu}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{scheduleMenu()}{scheduleMenu()}}
+{\footnotesize\ttfamily void Interface\+::schedule\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Menu for Schedule. 
+
+This allows you to obtain information on years, classes and courses in order to print schedules. 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067                              \{}
+\DoxyCodeLine{00068     cout << \textcolor{stringliteral}{"{}=========╬ Schedules ╬==========\(\backslash\)n"{}};}
+\DoxyCodeLine{00069     cout << \textcolor{stringliteral}{"{}1. -\/-\/ UC\(\backslash\)n"{}};}
+\DoxyCodeLine{00070     cout << \textcolor{stringliteral}{"{}2. -\/-\/ Class\(\backslash\)n"{}};}
+\DoxyCodeLine{00071     cout << \textcolor{stringliteral}{"{}3. -\/-\/ Student\(\backslash\)n"{}};}
+\DoxyCodeLine{00072     cout << \textcolor{stringliteral}{"{}4. Go Back\(\backslash\)n"{}};}
+\DoxyCodeLine{00073     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00074     \textcolor{keywordtype}{int} option, day = 0, year;}
+\DoxyCodeLine{00075     \textcolor{keywordtype}{string} uc, class\_, button, studentUP, studentName;}
+\DoxyCodeLine{00076     vector<Lesson> sorted;}
+\DoxyCodeLine{00077     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00078         cin >> option;}
+\DoxyCodeLine{00079         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00080             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00081                 uc = \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}}();}
+\DoxyCodeLine{00082                 sorted = rf.getUC(uc).getLessonsbyDay();}
+\DoxyCodeLine{00083                 \mbox{\hyperlink{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}{printSchedule}}(sorted, \textcolor{keyword}{false}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00084                 BackMainMenu();}
+\DoxyCodeLine{00085                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00086             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00087                 cout << \textcolor{stringliteral}{"{}Choose a year: "{}};}
+\DoxyCodeLine{00088                 cin >> year;}
+\DoxyCodeLine{00089                 cout << \textcolor{stringliteral}{"{}=========== Year "{}} << year << \textcolor{stringliteral}{"{} ===========\(\backslash\)n"{}};}
+\DoxyCodeLine{00090                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getClasses().size(); i++) \{}
+\DoxyCodeLine{00091                     \textcolor{keywordflow}{if} (rf.getClasses()[i].getYear() == year) \{}
+\DoxyCodeLine{00092                         cout << rf.getClasses()[i].getClassCode() << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{00093                     \}}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095                 \}}
+\DoxyCodeLine{00096                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nWrite the name of the Class you want:  "{}};}
+\DoxyCodeLine{00097                 cin >> class\_;}
+\DoxyCodeLine{00098                 sorted = rf.getClass(class\_).getLessonsbyDay();}
+\DoxyCodeLine{00099                 \mbox{\hyperlink{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}{printSchedule}}(sorted, \textcolor{keyword}{true}, \textcolor{keyword}{false});}
+\DoxyCodeLine{00100                 year = 0;}
+\DoxyCodeLine{00101                 BackMainMenu();}
+\DoxyCodeLine{00102                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00104                 cout << \textcolor{stringliteral}{"{}Write the number of the Student:  "{}};}
+\DoxyCodeLine{00105                 cin >> studentUP;}
+\DoxyCodeLine{00106                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00107                     \textcolor{keywordflow}{if} (studentUP == rf.getStudents()[i].getUp())}
+\DoxyCodeLine{00108                     \{}
+\DoxyCodeLine{00109                         studentName = rf.getStudents()[i].getName();}
+\DoxyCodeLine{00110                         vector<Lesson> lessons = rf.lessonsForStudent(rf.getStudents()[i]);}
+\DoxyCodeLine{00111                         sorted = rf.sortLessonsByDay(lessons);}
+\DoxyCodeLine{00112                     \}}
+\DoxyCodeLine{00113                 \}}
+\DoxyCodeLine{00114                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}Schedule of "{}} + studentName + \textcolor{stringliteral}{"{} ("{}} + studentUP + \textcolor{charliteral}{')'} + \textcolor{stringliteral}{"{} ====="{}};}
+\DoxyCodeLine{00115                 \mbox{\hyperlink{classInterface_a9753af22ecb6a086b43afb4cd3c64bce}{printSchedule}}(sorted, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
+\DoxyCodeLine{00116                 BackMainMenu();}
+\DoxyCodeLine{00117                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00119                 \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{mainMenu}}();}
+\DoxyCodeLine{00120                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00121             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00122                 cout << \textcolor{stringliteral}{"{}Invalid Option. Try Again.\(\backslash\)n"{}};}
+\DoxyCodeLine{00123         \}}
+\DoxyCodeLine{00124     \} \textcolor{keywordflow}{while} (option != 5);}
+\DoxyCodeLine{00125 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a244c3a43dd1ad198b202ad07d3d2d1e7}\label{classInterface_a244c3a43dd1ad198b202ad07d3d2d1e7}} 
+\index{Interface@{Interface}!setReadFiles@{setReadFiles}}
+\index{setReadFiles@{setReadFiles}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{setReadFiles()}{setReadFiles()}}
+{\footnotesize\ttfamily void Interface\+::set\+Read\+Files (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classReadFiles}{Read\+Files}} \&}]{rf }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022 \{ this-\/>rf = rf;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a05a612179bd9cf626a3f7cb0571e4a16}\label{classInterface_a05a612179bd9cf626a3f7cb0571e4a16}} 
+\index{Interface@{Interface}!UCInformation@{UCInformation}}
+\index{UCInformation@{UCInformation}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{UCInformation()}{UCInformation()}}
+{\footnotesize\ttfamily void Interface\+::\+UCInformation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+You can see how many hours this subject has per week and the students enrolled. 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00188}{188}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00188                               \{}
+\DoxyCodeLine{00189     \textcolor{keywordtype}{int} option;}
+\DoxyCodeLine{00190     \textcolor{keywordtype}{string} uc, lesson, button;}
+\DoxyCodeLine{00191     \textcolor{keywordtype}{double} duration;}
+\DoxyCodeLine{00192     vector<pair<string, string>> students;}
+\DoxyCodeLine{00193     cout << \textcolor{stringliteral}{"{}==========╬ About a UC ╬==========\(\backslash\)n"{}};}
+\DoxyCodeLine{00194     cout << \textcolor{stringliteral}{"{}1. Number of hours per week\(\backslash\)n"{}};}
+\DoxyCodeLine{00195     cout << \textcolor{stringliteral}{"{}2. Students\(\backslash\)n"{}};}
+\DoxyCodeLine{00196     cout << \textcolor{stringliteral}{"{}3. Occupation\(\backslash\)n"{}};}
+\DoxyCodeLine{00197     cout << \textcolor{stringliteral}{"{}4. Go Back\(\backslash\)n"{}};}
+\DoxyCodeLine{00198     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00199     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00200         cin >> option;}
+\DoxyCodeLine{00201         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00202             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00203                 uc = \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}}();}
+\DoxyCodeLine{00204                 lesson = rf.getUC(uc).getLessons()[0].getClasscode();}
+\DoxyCodeLine{00205                 duration = rf.getUC(uc).getLessons()[0].getDuration();}
+\DoxyCodeLine{00206                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < rf.getUC(uc).getLessons().size(); i++) \{}
+\DoxyCodeLine{00207                     \textcolor{keywordflow}{if} (lesson == rf.getUC(uc).getLessons()[i].getClasscode()) \{}
+\DoxyCodeLine{00208                         duration += rf.getUC(uc).getLessons()[i].getDuration();}
+\DoxyCodeLine{00209                     \}}
+\DoxyCodeLine{00210                 \}}
+\DoxyCodeLine{00211                 cout << \textcolor{stringliteral}{"{}===== "{}} << \textcolor{stringliteral}{"{}Hours per week of "{}} + uc + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00212                 cout << \textcolor{stringliteral}{"{}                 "{}} << duration << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00213                 BackMainMenu();}
+\DoxyCodeLine{00214                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00215             \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{00216                 uc = \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}}();}
+\DoxyCodeLine{00217                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{ \textcolor{comment}{//percorrer os estudantes}}
+\DoxyCodeLine{00218                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < rf.getStudents()[i].getStudent\_classes().size(); j++) \{ \textcolor{comment}{//ver as ucs que eles estão}}
+\DoxyCodeLine{00219                         \textcolor{keywordflow}{if} (rf.getStudents()[i].getStudent\_classes()[j].first == uc) \{}
+\DoxyCodeLine{00220                             students.push\_back(make\_pair(rf.getStudents()[i].getName(), rf.getStudents()[i].getUp()));}
+\DoxyCodeLine{00221                         \}}
+\DoxyCodeLine{00222                     \}}
+\DoxyCodeLine{00223                 \}}
+\DoxyCodeLine{00224                 sort(students.begin(), students.end());}
+\DoxyCodeLine{00225                 cout << \textcolor{stringliteral}{"{}===== "{}} << \textcolor{stringliteral}{"{}Students of "{}} + uc + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00226                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x= 0; x < students.size(); x++) \{}
+\DoxyCodeLine{00227                     cout << students[x].second + \textcolor{stringliteral}{"{} -\/ "{}} + students[x].first << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00228                 \}}
+\DoxyCodeLine{00229                 cout << \textcolor{stringliteral}{"{}===========================\(\backslash\)n"{}};}
+\DoxyCodeLine{00230                 cout << \textcolor{stringliteral}{"{}This UC has "{}} << students.size() << \textcolor{stringliteral}{"{} students.\(\backslash\)n"{}};}
+\DoxyCodeLine{00231                 BackMainMenu();}
+\DoxyCodeLine{00232                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00233             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{00234                 uc = \mbox{\hyperlink{classInterface_a92176f0264ef52944f6be6dd5581dda9}{UCLauncher}}();}
+\DoxyCodeLine{00235                 students.clear();}
+\DoxyCodeLine{00236                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{ \textcolor{comment}{//percorrer os estudantes}}
+\DoxyCodeLine{00237                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < rf.getStudents()[i].getStudent\_classes().size(); j++) \{ \textcolor{comment}{//ver as ucs que eles estão}}
+\DoxyCodeLine{00238                         \textcolor{keywordflow}{if} (rf.getStudents()[i].getStudent\_classes()[j].first == uc) \{}
+\DoxyCodeLine{00239                             students.push\_back(make\_pair(rf.getStudents()[i].getName(), rf.getStudents()[i].getUp()));}
+\DoxyCodeLine{00240                         \}}
+\DoxyCodeLine{00241                     \}}
+\DoxyCodeLine{00242                 \}}
+\DoxyCodeLine{00243                 cout << \textcolor{stringliteral}{"{}\(\backslash\)n===== "{}} << \textcolor{stringliteral}{"{}Occupation of "{}} + uc + \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00244                 cout << \textcolor{stringliteral}{"{}             "{}} << students.size() << \textcolor{stringliteral}{"{} / 400\(\backslash\)n"{}};}
+\DoxyCodeLine{00245                 BackMainMenu();}
+\DoxyCodeLine{00246             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00247                 \mbox{\hyperlink{classInterface_a0db91b8f8d2184ec458b3a68ffc19583}{information}}();}
+\DoxyCodeLine{00248                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00249             \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{00250                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00251         \}}
+\DoxyCodeLine{00252     \}\textcolor{keywordflow}{while} (option != 5);}
+\DoxyCodeLine{00253 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_a92176f0264ef52944f6be6dd5581dda9}\label{classInterface_a92176f0264ef52944f6be6dd5581dda9}} 
+\index{Interface@{Interface}!UCLauncher@{UCLauncher}}
+\index{UCLauncher@{UCLauncher}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{UCLauncher()}{UCLauncher()}}
+{\footnotesize\ttfamily string Interface\+::\+UCLauncher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function gives a printout of all the UCs and allows the user to choose them.
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00626}{626}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00626                              \{}
+\DoxyCodeLine{00627     \textcolor{keywordtype}{int} uc;}
+\DoxyCodeLine{00628     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getUcs().size() /2; i++) \{}
+\DoxyCodeLine{00629             cout << i+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getUcs()[i].getUCname() << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{00630     \}}
+\DoxyCodeLine{00631     cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00632     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = rf.getUcs().size() /2; j< rf.getUcs().size(); j++) \{}
+\DoxyCodeLine{00633             cout << j+1 << \textcolor{stringliteral}{"{}. "{}} << rf.getUcs()[j].getUCname() << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{00634     \}}
+\DoxyCodeLine{00635     cout << \textcolor{stringliteral}{"{}\(\backslash\)nChoose a UC: "{}};}
+\DoxyCodeLine{00636     cin >> uc;}
+\DoxyCodeLine{00637     \textcolor{keywordflow}{return} rf.getUcs()[uc-\/1].getUCname();}
+\DoxyCodeLine{00638 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInterface_aff4d5cdafc6fe54d8ac535e6e568b76d}\label{classInterface_aff4d5cdafc6fe54d8ac535e6e568b76d}} 
+\index{Interface@{Interface}!yearInformation@{yearInformation}}
+\index{yearInformation@{yearInformation}!Interface@{Interface}}
+\doxysubsubsection{\texorpdfstring{yearInformation()}{yearInformation()}}
+{\footnotesize\ttfamily void Interface\+::year\+Information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Allows you to see the students of a year 
+
+Definition at line \mbox{\hyperlink{Interface_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{Interface_8cpp_source}{Interface.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293                                 \{}
+\DoxyCodeLine{00294     \textcolor{keywordtype}{int} option, year;}
+\DoxyCodeLine{00295     \textcolor{keywordtype}{string} uc, lesson;}
+\DoxyCodeLine{00296     \textcolor{keywordtype}{string} button;}
+\DoxyCodeLine{00297     cout << \textcolor{stringliteral}{"{}1. Year's Students \(\backslash\)n"{}};}
+\DoxyCodeLine{00298     cout << \textcolor{stringliteral}{"{}Choose an option: "{}};}
+\DoxyCodeLine{00299     vector<pair<string, string>> students;}
+\DoxyCodeLine{00300     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00301         cin >> option;}
+\DoxyCodeLine{00302         \textcolor{keywordflow}{switch} (option) \{}
+\DoxyCodeLine{00303             \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{00304                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nWrite the Year (number): "{}};}
+\DoxyCodeLine{00305                 cin >> year;}
+\DoxyCodeLine{00306                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < rf.getStudents().size(); i++) \{}
+\DoxyCodeLine{00307                     \textcolor{keywordflow}{if} (rf.getStudents()[i].getYear() == year)}
+\DoxyCodeLine{00308                         students.push\_back(make\_pair(rf.getStudents()[i].getName(), rf.getStudents()[i].getUp()));}
+\DoxyCodeLine{00309                 \}}
+\DoxyCodeLine{00310                 sort(students.begin(), students.end());}
+\DoxyCodeLine{00311                 cout << \textcolor{stringliteral}{"{}===== "{}} << \textcolor{stringliteral}{"{}Students of Year "{}} << year << \textcolor{stringliteral}{"{} =====\(\backslash\)n"{}};}
+\DoxyCodeLine{00312                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k < students.size(); k++)\{}
+\DoxyCodeLine{00313                     cout << students[k].first << \textcolor{stringliteral}{"{} -\/ "{}} << students[k].second << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00314                 \}}
+\DoxyCodeLine{00315                 cout << \textcolor{stringliteral}{"{}===========================\(\backslash\)n"{}};}
+\DoxyCodeLine{00316                 cout << \textcolor{stringliteral}{"{}This year has "{}} << students.size() << \textcolor{stringliteral}{"{} students.\(\backslash\)n"{}};}
+\DoxyCodeLine{00317                 cout << \textcolor{stringliteral}{"{}\(\backslash\)nPress E to exit:  "{}};}
+\DoxyCodeLine{00318                 cin >> button;}
+\DoxyCodeLine{00319                 \textcolor{keywordflow}{if} (button == \textcolor{stringliteral}{"{}E"{}}) \{}
+\DoxyCodeLine{00320                     \mbox{\hyperlink{classInterface_ae3c5680ac1fe3077ae7caffa54c737d3}{mainMenu}}();}
+\DoxyCodeLine{00321                 \}}
+\DoxyCodeLine{00322                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00323         \}}
+\DoxyCodeLine{00324     \}\textcolor{keywordflow}{while}(option != 5);}
+\DoxyCodeLine{00325 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Interface.\+h\item 
+Interface.\+cpp\end{DoxyCompactItemize}

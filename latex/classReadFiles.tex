@@ -1,0 +1,624 @@
+\hypertarget{classReadFiles}{}\doxysection{Read\+Files Class Reference}
+\label{classReadFiles}\index{ReadFiles@{ReadFiles}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReadFiles_ab837b7e932e7b62591624269383aa7df}\label{classReadFiles_ab837b7e932e7b62591624269383aa7df}} 
+void {\bfseries class\+\_\+per\+\_\+uc\+\_\+reader} ()
+\item 
+void \mbox{\hyperlink{classReadFiles_ae3addaea2f21f02c3d6b50785d277871}{classes\+\_\+reader}} ()
+\begin{DoxyCompactList}\small\item\em This function reads the csv file that provides the information about a lesson. We remove the existing UCs, create an object for each one and store them in an array. We also create an object for the lessons, which are stored in their \mbox{\hyperlink{classUC}{UC}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReadFiles_ae2788a9a27c7e2fe4f10b746d58412b4}{students\+\_\+classes\+\_\+reader}} ()
+\begin{DoxyCompactList}\small\item\em This function reads the csv file that provides the information about the students. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classUC}{UC}} $>$ \mbox{\hyperlink{classReadFiles_a1811f90bcb45c2ac5237da68f1148853}{get\+Ucs}} ()
+\item 
+\mbox{\hyperlink{classUC}{UC}} \& \mbox{\hyperlink{classReadFiles_a16ff8eb1115b36e280eb94684d49429a}{get\+UC}} (string uc\+Name)
+\item 
+vector$<$ \mbox{\hyperlink{classStudent}{Student}} $>$ \mbox{\hyperlink{classReadFiles_ae5c7de3af2a91f97a9f75f8b479a200d}{get\+Students}} ()
+\item 
+\mbox{\hyperlink{classStudent}{Student}} \& \mbox{\hyperlink{classReadFiles_a1c0ff30ef5475f7714c6aa98b3fa92eb}{get\+Student}} (string up)
+\item 
+bool \mbox{\hyperlink{classReadFiles_a2459e9684f99a3072abfd4cc98998f52}{has\+Class}} (string class\+Code)
+\item 
+\mbox{\hyperlink{classClass}{Class}} \& \mbox{\hyperlink{classReadFiles_aa3aa023e2c52dfda587615728295cec2}{get\+Class}} (string class\+Code)
+\item 
+vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ \& \mbox{\hyperlink{classReadFiles_a6184a927a6c2f0f8836553f3960d5325}{get\+Classes}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \mbox{\hyperlink{classReadFiles_a565bc58bd3fd1da7a5a609814a5a6b56}{lessons\+For\+Student}} (\mbox{\hyperlink{classStudent}{Student}} student)
+\item 
+void \mbox{\hyperlink{classReadFiles_a6f19b5e3069e951bf577115b33b004cb}{set\+Year\+Students}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \mbox{\hyperlink{classReadFiles_ad05280a29d4fe1875557ae58711ff898}{sort\+Lessons\+By\+Day}} (vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ lessons)
+\item 
+void \mbox{\hyperlink{classReadFiles_a6dbf0d6824df68374f723256bc313046}{create\+Classes}} ()
+\item 
+\mbox{\Hypertarget{classReadFiles_a380907016f7d4ed9792d82c445a9e3c4}\label{classReadFiles_a380907016f7d4ed9792d82c445a9e3c4}} 
+vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ {\bfseries get\+Class\+Chances} (string uc, string current\+Class, \mbox{\hyperlink{classStudent}{Student}} student, bool add\+UC=false)
+\item 
+\mbox{\Hypertarget{classReadFiles_afce54a94b3b5fddb861560b0a2ccd5a9}\label{classReadFiles_afce54a94b3b5fddb861560b0a2ccd5a9}} 
+vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ {\bfseries get\+Class\+Chances} (string old\+UC, string old\+Class, string new\+UC, \mbox{\hyperlink{classStudent}{Student}} student)
+\item 
+bool \mbox{\hyperlink{classReadFiles_a7a17a72f901424c1b031b6aeb3ed4ecc}{lessons\+Overlap}} (\mbox{\hyperlink{classLesson}{Lesson}} l1, \mbox{\hyperlink{classLesson}{Lesson}} l2)
+\item 
+int \mbox{\hyperlink{classReadFiles_a0f8dcf072230d4c322cac687e710c22c}{max\+\_\+}} (vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ classes)
+\item 
+int \mbox{\hyperlink{classReadFiles_acac23183e56d7404b0dcf82d76401c02}{min\+\_\+}} (vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ classes)
+\item 
+void \mbox{\hyperlink{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}{change\+Class}} (\mbox{\hyperlink{classClass}{Class}} old, \mbox{\hyperlink{classClass}{Class}} new\+\_\+, string uc, \mbox{\hyperlink{classStudent}{Student}} student, bool add\+To\+Log)
+\begin{DoxyCompactList}\small\item\em Function to change class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classReadFiles_a4f61c7281985eccf79827a7800af9220}{add\+UC}} (\mbox{\hyperlink{classUC}{UC}} new\+\_\+, \mbox{\hyperlink{classClass}{Class}} new\+Class, \mbox{\hyperlink{classStudent}{Student}} student, bool add\+To\+Log)
+\item 
+void \mbox{\hyperlink{classReadFiles_aaff5918b44967c3f6d7aefe5ebffd5d7}{remove\+UC}} (\mbox{\hyperlink{classUC}{UC}} old\+\_\+, \mbox{\hyperlink{classClass}{Class}} old\+Class, \mbox{\hyperlink{classStudent}{Student}} student, bool add\+To\+Log)
+\item 
+void \mbox{\hyperlink{classReadFiles_a01de91cb10659e5c92ee9f5f1a0f99e4}{change\+UC}} (\mbox{\hyperlink{classUC}{UC}} old\+\_\+, \mbox{\hyperlink{classClass}{Class}} oldclass, \mbox{\hyperlink{classUC}{UC}} new\+\_\+, \mbox{\hyperlink{classClass}{Class}} new\+Class, \mbox{\hyperlink{classStudent}{Student}} student, bool add\+To\+Log)
+\item 
+void \mbox{\hyperlink{classReadFiles_ab60f0417cb2a116b3ba0d0412452035e}{load\+Requests}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classRequest}{Request}} $>$ \& \mbox{\hyperlink{classReadFiles_ad7ee0d91c54c24b0bc82dd0fee8018be}{get\+Requests}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8h_source_l00012}{12}} of file \mbox{\hyperlink{ReadFiles_8h_source}{Read\+Files.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReadFiles_a4f61c7281985eccf79827a7800af9220}\label{classReadFiles_a4f61c7281985eccf79827a7800af9220}} 
+\index{ReadFiles@{ReadFiles}!addUC@{addUC}}
+\index{addUC@{addUC}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{addUC()}{addUC()}}
+{\footnotesize\ttfamily void Read\+Files\+::add\+UC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUC}{UC}}}]{new\+\_\+,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{new\+Class,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student,  }\item[{bool}]{add\+To\+Log }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00379}{379}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00379                                                                              \{}
+\DoxyCodeLine{00380     \mbox{\hyperlink{classRequest}{Request}} request(new\_, newClass, student, \textcolor{stringliteral}{"{}UCAdd"{}});}
+\DoxyCodeLine{00381     \textcolor{keywordflow}{if} (addToLog) request.addToLog();}
+\DoxyCodeLine{00382     requests.push\_back(request);}
+\DoxyCodeLine{00383     getUC(new\_.getUCname()).addStudent(newClass.getClassCode(), student); \textcolor{comment}{// add student to UC lessons}}
+\DoxyCodeLine{00384     getClass(newClass.getClassCode()).addStudent(new\_.getUCname(), student); \textcolor{comment}{// add student to a new class in the UC}}
+\DoxyCodeLine{00385     \textcolor{keyword}{auto} it = find(students.begin(), students.end(), student);}
+\DoxyCodeLine{00386     it-\/>addClass(new\_.getUCname(), newClass.getClassCode()); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00387 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}\label{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}} 
+\index{ReadFiles@{ReadFiles}!changeClass@{changeClass}}
+\index{changeClass@{changeClass}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{changeClass()}{changeClass()}}
+{\footnotesize\ttfamily void Read\+Files\+::change\+Class (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClass}{Class}}}]{old,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{new\+\_\+,  }\item[{string}]{uc,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student,  }\item[{bool}]{add\+To\+Log }\end{DoxyParamCaption})}
+
+
+
+Function to change class. 
+
+\mbox{\hyperlink{classClass}{Class}} changes are made by removing the student from the old class and adding them to the new one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em old} & class \\
+\hline
+{\em new\+\_\+} & class \\
+\hline
+{\em uc} & \\
+\hline
+{\em student} & \\
+\hline
+{\em add\+To\+Log} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00366}{366}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00366                                                                                             \{}
+\DoxyCodeLine{00367     \mbox{\hyperlink{classRequest}{Request}} request(old, new\_, student, uc, \textcolor{stringliteral}{"{}ClassChange"{}});}
+\DoxyCodeLine{00368     \textcolor{keywordflow}{if} (addToLog) request.addToLog();}
+\DoxyCodeLine{00369     requests.push\_back(request);}
+\DoxyCodeLine{00370     getUC(uc).removeStudent(old.getClassCode(), student); \textcolor{comment}{// remove student from UC lessons}}
+\DoxyCodeLine{00371     getUC(uc).addStudent(new\_.getClassCode(), student); \textcolor{comment}{// add student to UC lessons}}
+\DoxyCodeLine{00372     getClass(old.getClassCode()).removeStudent(uc, student); \textcolor{comment}{// remove student from the class in the UC}}
+\DoxyCodeLine{00373     getClass(new\_.getClassCode()).addStudent(uc, student); \textcolor{comment}{// add student to a new class in the UC}}
+\DoxyCodeLine{00374     \textcolor{keyword}{auto} it = find(students.begin(), students.end(), student);}
+\DoxyCodeLine{00375     it-\/>removeClass(uc); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00376     it-\/>addClass(uc, new\_.getClassCode()); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00377 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a01de91cb10659e5c92ee9f5f1a0f99e4}\label{classReadFiles_a01de91cb10659e5c92ee9f5f1a0f99e4}} 
+\index{ReadFiles@{ReadFiles}!changeUC@{changeUC}}
+\index{changeUC@{changeUC}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{changeUC()}{changeUC()}}
+{\footnotesize\ttfamily void Read\+Files\+::change\+UC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUC}{UC}}}]{old\+\_\+,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{oldclass,  }\item[{\mbox{\hyperlink{classUC}{UC}}}]{new\+\_\+,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{new\+Class,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student,  }\item[{bool}]{add\+To\+Log }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00399}{399}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00399                                                                                                          \{}
+\DoxyCodeLine{00400     \mbox{\hyperlink{classRequest}{Request}} request(old\_, new\_, oldclass, newClass, student, \textcolor{stringliteral}{"{}UCChange"{}});}
+\DoxyCodeLine{00401     \textcolor{keywordflow}{if} (addToLog) request.addToLog();}
+\DoxyCodeLine{00402     requests.push\_back(request);}
+\DoxyCodeLine{00403     getUC(old\_.getUCname()).removeStudent(oldclass.getClassCode(), student); \textcolor{comment}{// remove student from UC lessons}}
+\DoxyCodeLine{00404     getUC(new\_.getUCname()).addStudent(newClass.getClassCode(), student); \textcolor{comment}{// add student to UC lessons}}
+\DoxyCodeLine{00405     getClass(oldclass.getClassCode()).removeStudent(old\_.getUCname(), student); \textcolor{comment}{// remove student from the class in the UC}}
+\DoxyCodeLine{00406     getClass(newClass.getClassCode()).addStudent(new\_.getUCname(), student); \textcolor{comment}{// add student to a new class in the UC}}
+\DoxyCodeLine{00407     \textcolor{keyword}{auto} it = find(students.begin(), students.end(), student);}
+\DoxyCodeLine{00408     it-\/>removeClass(old\_.getUCname()); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00409     it-\/>addClass(new\_.getUCname(), newClass.getClassCode()); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00410 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ae3addaea2f21f02c3d6b50785d277871}\label{classReadFiles_ae3addaea2f21f02c3d6b50785d277871}} 
+\index{ReadFiles@{ReadFiles}!classes\_reader@{classes\_reader}}
+\index{classes\_reader@{classes\_reader}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{classes\_reader()}{classes\_reader()}}
+{\footnotesize\ttfamily void Read\+Files\+::classes\+\_\+reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function reads the csv file that provides the information about a lesson. We remove the existing UCs, create an object for each one and store them in an array. We also create an object for the lessons, which are stored in their \mbox{\hyperlink{classUC}{UC}}. 
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                               \{}
+\DoxyCodeLine{00044     \textcolor{keywordtype}{string} line,uc,classcode, weekday, starthour, duration, type;}
+\DoxyCodeLine{00045     ifstream in(\textcolor{stringliteral}{"{}../schedule/classes.csv"{}});}
+\DoxyCodeLine{00046     getline(in, line);}
+\DoxyCodeLine{00047     \textcolor{keywordtype}{string} compare = \textcolor{stringliteral}{"{}x"{}};}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{int} j=0;}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{while}(getline(in, line))\{}
+\DoxyCodeLine{00050         stringstream iss(line);}
+\DoxyCodeLine{00051         getline(iss, classcode, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00052         getline(iss, uc, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00053         getline(iss, weekday, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00054         getline(iss, starthour, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00055         getline(iss, duration, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00056         getline(iss, type, \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058         \textcolor{keywordflow}{if}(uc != compare)\{}
+\DoxyCodeLine{00059             j=0;}
+\DoxyCodeLine{00060             compare = uc;}
+\DoxyCodeLine{00061             \mbox{\hyperlink{classUC}{UC}} subject(uc);}
+\DoxyCodeLine{00062             ucS.push\_back(subject);}
+\DoxyCodeLine{00063         \}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065         ucS.at(ucS.size()-\/1).addLesson(classcode, uc, type, weekday, stod(duration), stod(starthour));}
+\DoxyCodeLine{00066         j++;}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068     cout << \textcolor{charliteral}{'\(\backslash\)n'} << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a6dbf0d6824df68374f723256bc313046}\label{classReadFiles_a6dbf0d6824df68374f723256bc313046}} 
+\index{ReadFiles@{ReadFiles}!createClasses@{createClasses}}
+\index{createClasses@{createClasses}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{createClasses()}{createClasses()}}
+{\footnotesize\ttfamily void Read\+Files\+::create\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00120}{120}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120                               \{}
+\DoxyCodeLine{00121     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ucS.size(); i++) \{}
+\DoxyCodeLine{00122         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b = 0; b < ucS[i].getLessons().size(); b++) \{}
+\DoxyCodeLine{00123             \textcolor{keywordflow}{if} (!hasClass(ucS[i].getLessons()[b].getClasscode())) \{}
+\DoxyCodeLine{00124                 \mbox{\hyperlink{classClass}{Class}} newClass(ucS[i].getLessons()[b].getClasscode(), (\textcolor{keywordtype}{int})ucS[i].getLessons()[b].getClasscode().at(0) -\/ 48);}
+\DoxyCodeLine{00125                 classes.push\_back(newClass);}
+\DoxyCodeLine{00126             \}}
+\DoxyCodeLine{00127             \mbox{\hyperlink{classLesson}{Lesson}} newLesson = ucS[i].getLessons()[b];}
+\DoxyCodeLine{00128             getClass(ucS[i].getLessons()[b].getClasscode()).addLesson(newLesson);}
+\DoxyCodeLine{00129         \}}
+\DoxyCodeLine{00130     \}}
+\DoxyCodeLine{00131 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_aa3aa023e2c52dfda587615728295cec2}\label{classReadFiles_aa3aa023e2c52dfda587615728295cec2}} 
+\index{ReadFiles@{ReadFiles}!getClass@{getClass}}
+\index{getClass@{getClass}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getClass()}{getClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classClass}{Class}} \& Read\+Files\+::get\+Class (\begin{DoxyParamCaption}\item[{string}]{class\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00142}{142}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142                                               \{}
+\DoxyCodeLine{00143     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00144         \textcolor{keywordflow}{if} (classCode == classes[i].getClassCode()) \textcolor{keywordflow}{return} classes[i];}
+\DoxyCodeLine{00145     \}}
+\DoxyCodeLine{00146 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a6184a927a6c2f0f8836553f3960d5325}\label{classReadFiles_a6184a927a6c2f0f8836553f3960d5325}} 
+\index{ReadFiles@{ReadFiles}!getClasses@{getClasses}}
+\index{getClasses@{getClasses}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getClasses()}{getClasses()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$ \& Read\+Files\+::get\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148                                      \{}
+\DoxyCodeLine{00149     \textcolor{keywordflow}{return} this-\/>classes;}
+\DoxyCodeLine{00150 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ad7ee0d91c54c24b0bc82dd0fee8018be}\label{classReadFiles_ad7ee0d91c54c24b0bc82dd0fee8018be}} 
+\index{ReadFiles@{ReadFiles}!getRequests@{getRequests}}
+\index{getRequests@{getRequests}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getRequests()}{getRequests()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classRequest}{Request}} $>$ \& Read\+Files\+::get\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00435}{435}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00435                                         \{}
+\DoxyCodeLine{00436     \textcolor{keywordflow}{return} requests;}
+\DoxyCodeLine{00437 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a1c0ff30ef5475f7714c6aa98b3fa92eb}\label{classReadFiles_a1c0ff30ef5475f7714c6aa98b3fa92eb}} 
+\index{ReadFiles@{ReadFiles}!getStudent@{getStudent}}
+\index{getStudent@{getStudent}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getStudent()}{getStudent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStudent}{Student}} \& Read\+Files\+::get\+Student (\begin{DoxyParamCaption}\item[{string}]{up }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00349}{349}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00349                                            \{}
+\DoxyCodeLine{00350     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < students.size(); i++) \{}
+\DoxyCodeLine{00351         \textcolor{keywordflow}{if} (students[i].getUp() == up) \textcolor{keywordflow}{return} students[i];}
+\DoxyCodeLine{00352     \}}
+\DoxyCodeLine{00353 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ae5c7de3af2a91f97a9f75f8b479a200d}\label{classReadFiles_ae5c7de3af2a91f97a9f75f8b479a200d}} 
+\index{ReadFiles@{ReadFiles}!getStudents@{getStudents}}
+\index{getStudents@{getStudents}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getStudents()}{getStudents()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classStudent}{Student}} $>$ Read\+Files\+::get\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133 \{\textcolor{keywordflow}{return} students;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a16ff8eb1115b36e280eb94684d49429a}\label{classReadFiles_a16ff8eb1115b36e280eb94684d49429a}} 
+\index{ReadFiles@{ReadFiles}!getUC@{getUC}}
+\index{getUC@{getUC}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getUC()}{getUC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUC}{UC}} \& Read\+Files\+::get\+UC (\begin{DoxyParamCaption}\item[{string}]{uc\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00114}{114}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114                                      \{}
+\DoxyCodeLine{00115     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ucS.size(); i++) \{}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{if} (ucS[i].getUCname() == ucName) \textcolor{keywordflow}{return} ucS[i];}
+\DoxyCodeLine{00117     \}}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a1811f90bcb45c2ac5237da68f1148853}\label{classReadFiles_a1811f90bcb45c2ac5237da68f1148853}} 
+\index{ReadFiles@{ReadFiles}!getUcs@{getUcs}}
+\index{getUcs@{getUcs}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{getUcs()}{getUcs()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classUC}{UC}} $>$ Read\+Files\+::get\+Ucs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110                              \{}
+\DoxyCodeLine{00111     \textcolor{keywordflow}{return} this-\/>ucS;}
+\DoxyCodeLine{00112 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a2459e9684f99a3072abfd4cc98998f52}\label{classReadFiles_a2459e9684f99a3072abfd4cc98998f52}} 
+\index{ReadFiles@{ReadFiles}!hasClass@{hasClass}}
+\index{hasClass@{hasClass}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{hasClass()}{hasClass()}}
+{\footnotesize\ttfamily bool Read\+Files\+::has\+Class (\begin{DoxyParamCaption}\item[{string}]{class\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135                                             \{}
+\DoxyCodeLine{00136     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{if} (classCode == classes[i].getClassCode()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00138     \}}
+\DoxyCodeLine{00139     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a565bc58bd3fd1da7a5a609814a5a6b56}\label{classReadFiles_a565bc58bd3fd1da7a5a609814a5a6b56}} 
+\index{ReadFiles@{ReadFiles}!lessonsForStudent@{lessonsForStudent}}
+\index{lessonsForStudent@{lessonsForStudent}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{lessonsForStudent()}{lessonsForStudent()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ Read\+Files\+::lessons\+For\+Student (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152                                                            \{}
+\DoxyCodeLine{00153     vector<Lesson> lessons;}
+\DoxyCodeLine{00154     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student.getStudent\_classes().size(); i++) \{}
+\DoxyCodeLine{00155         vector<Lesson> lessonsToAdd = getUC(student.getStudent\_classes()[i].first).getLessons(student.getStudent\_classes()[i].second);}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{for} (\mbox{\hyperlink{classLesson}{Lesson}} lesson : lessonsToAdd) lessons.push\_back(lesson);}
+\DoxyCodeLine{00157     \}}
+\DoxyCodeLine{00158     \textcolor{keywordflow}{return} lessons;}
+\DoxyCodeLine{00159 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a7a17a72f901424c1b031b6aeb3ed4ecc}\label{classReadFiles_a7a17a72f901424c1b031b6aeb3ed4ecc}} 
+\index{ReadFiles@{ReadFiles}!lessonsOverlap@{lessonsOverlap}}
+\index{lessonsOverlap@{lessonsOverlap}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{lessonsOverlap()}{lessonsOverlap()}}
+{\footnotesize\ttfamily bool Read\+Files\+::lessons\+Overlap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLesson}{Lesson}}}]{l1,  }\item[{\mbox{\hyperlink{classLesson}{Lesson}}}]{l2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00318}{318}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00318                                                    \{}
+\DoxyCodeLine{00319     \textcolor{keywordflow}{if} (l1.getDay\_() == l2.getDay\_()) \{}
+\DoxyCodeLine{00320         \textcolor{keywordflow}{return} l1.getEndHour() > l2.getStartHour() \&\& (l2.getEndHour() > l1.getStartHour());}
+\DoxyCodeLine{00321     \}}
+\DoxyCodeLine{00322     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00323 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ab60f0417cb2a116b3ba0d0412452035e}\label{classReadFiles_ab60f0417cb2a116b3ba0d0412452035e}} 
+\index{ReadFiles@{ReadFiles}!loadRequests@{loadRequests}}
+\index{loadRequests@{loadRequests}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{loadRequests()}{loadRequests()}}
+{\footnotesize\ttfamily void Read\+Files\+::load\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00413}{413}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00413                              \{}
+\DoxyCodeLine{00414     ifstream in(\textcolor{stringliteral}{"{}../log.txt"{}});}
+\DoxyCodeLine{00415     \textcolor{keywordtype}{string} line, type, up, uc, oldClass, newClass, oldUc, newUc;}
+\DoxyCodeLine{00416     \textcolor{keywordflow}{while}(getline(in, line)) \{}
+\DoxyCodeLine{00417         stringstream iss(line);}
+\DoxyCodeLine{00418         getline(iss, type, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00419         getline(iss, up, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00420         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}ClassChange"{}} || type == \textcolor{stringliteral}{"{}UCAdd"{}} || type == \textcolor{stringliteral}{"{}UCRemove"{}}) getline(iss, uc, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00421         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}ClassChange"{}}) getline(iss, oldClass, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00422         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCChange"{}}) \{}
+\DoxyCodeLine{00423             getline(iss, oldUc, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00424             getline(iss, oldClass, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00425             getline(iss, newUc, \textcolor{charliteral}{'-\/'});}
+\DoxyCodeLine{00426         \}}
+\DoxyCodeLine{00427         getline(iss, newClass, \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{00428         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}ClassChange"{}}) \mbox{\hyperlink{classReadFiles_ac97b4f848dabcda3a9e0359a575ff3d7}{changeClass}}(getClass(oldClass), getClass(newClass), uc, getStudent(up), \textcolor{keyword}{false});}
+\DoxyCodeLine{00429         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCAdd"{}}) addUC(getUC(uc), getClass(newClass), getStudent(up), \textcolor{keyword}{false});}
+\DoxyCodeLine{00430         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCRemove"{}}) removeUC(getUC(uc), getClass(newClass), getStudent(up), \textcolor{keyword}{false});}
+\DoxyCodeLine{00431         \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCChange"{}}) changeUC(getUC(oldUc), getClass(oldClass), getUC(newUc), getClass(newClass), getStudent(up), \textcolor{keyword}{false});}
+\DoxyCodeLine{00432     \}}
+\DoxyCodeLine{00433 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a0f8dcf072230d4c322cac687e710c22c}\label{classReadFiles_a0f8dcf072230d4c322cac687e710c22c}} 
+\index{ReadFiles@{ReadFiles}!max\_@{max\_}}
+\index{max\_@{max\_}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{max\_()}{max\_()}}
+{\footnotesize\ttfamily int Read\+Files\+::max\+\_\+ (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$}]{classes }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00331}{331}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331                                          \{}
+\DoxyCodeLine{00332     \textcolor{keywordtype}{int} max = 0;}
+\DoxyCodeLine{00333     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00334         \textcolor{keywordflow}{if} (classes[i].getLessons()[0].getStudents().size() > max)}
+\DoxyCodeLine{00335             max = classes[i].getLessons()[0].getStudents().size();}
+\DoxyCodeLine{00336     \}}
+\DoxyCodeLine{00337     \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{00338 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_acac23183e56d7404b0dcf82d76401c02}\label{classReadFiles_acac23183e56d7404b0dcf82d76401c02}} 
+\index{ReadFiles@{ReadFiles}!min\_@{min\_}}
+\index{min\_@{min\_}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{min\_()}{min\_()}}
+{\footnotesize\ttfamily int Read\+Files\+::min\+\_\+ (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classClass}{Class}} $>$}]{classes }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00340}{340}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00340                                          \{}
+\DoxyCodeLine{00341     \textcolor{keywordtype}{int} min = 10000;}
+\DoxyCodeLine{00342     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < classes.size(); i++) \{}
+\DoxyCodeLine{00343         \textcolor{keywordflow}{if} (classes[i].getLessons()[0].getStudents().size() < min)}
+\DoxyCodeLine{00344             min = classes[i].getLessons()[0].getStudents().size();}
+\DoxyCodeLine{00345     \}}
+\DoxyCodeLine{00346     \textcolor{keywordflow}{return} min;}
+\DoxyCodeLine{00347 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_aaff5918b44967c3f6d7aefe5ebffd5d7}\label{classReadFiles_aaff5918b44967c3f6d7aefe5ebffd5d7}} 
+\index{ReadFiles@{ReadFiles}!removeUC@{removeUC}}
+\index{removeUC@{removeUC}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{removeUC()}{removeUC()}}
+{\footnotesize\ttfamily void Read\+Files\+::remove\+UC (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUC}{UC}}}]{old\+\_\+,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{old\+Class,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student,  }\item[{bool}]{add\+To\+Log }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00389}{389}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00389                                                                                 \{}
+\DoxyCodeLine{00390     \mbox{\hyperlink{classRequest}{Request}} request(oldClass, old\_, student, \textcolor{stringliteral}{"{}UCRemove"{}});}
+\DoxyCodeLine{00391     \textcolor{keywordflow}{if} (addToLog) request.addToLog();}
+\DoxyCodeLine{00392     requests.push\_back(request);}
+\DoxyCodeLine{00393     getUC(old\_.getUCname()).removeStudent(oldClass.getClassCode(), student); \textcolor{comment}{// remove student from UC lessons}}
+\DoxyCodeLine{00394     getClass(oldClass.getClassCode()).removeStudent(old\_.getUCname(), student); \textcolor{comment}{// remove student from the class in the UC}}
+\DoxyCodeLine{00395     \textcolor{keyword}{auto} it = find(students.begin(), students.end(), student);}
+\DoxyCodeLine{00396     it-\/>removeClass(old\_.getUCname()); \textcolor{comment}{// update Student}}
+\DoxyCodeLine{00397 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_a6f19b5e3069e951bf577115b33b004cb}\label{classReadFiles_a6f19b5e3069e951bf577115b33b004cb}} 
+\index{ReadFiles@{ReadFiles}!setYearStudents@{setYearStudents}}
+\index{setYearStudents@{setYearStudents}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{setYearStudents()}{setYearStudents()}}
+{\footnotesize\ttfamily void Read\+Files\+::set\+Year\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00325}{325}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00325                                 \{}
+\DoxyCodeLine{00326     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < students.size(); i++) \{}
+\DoxyCodeLine{00327         students[i].setYear();}
+\DoxyCodeLine{00328     \}}
+\DoxyCodeLine{00329 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ad05280a29d4fe1875557ae58711ff898}\label{classReadFiles_ad05280a29d4fe1875557ae58711ff898}} 
+\index{ReadFiles@{ReadFiles}!sortLessonsByDay@{sortLessonsByDay}}
+\index{sortLessonsByDay@{sortLessonsByDay}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{sortLessonsByDay()}{sortLessonsByDay()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ Read\+Files\+::sort\+Lessons\+By\+Day (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$}]{lessons }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161                                                                  \{}
+\DoxyCodeLine{00162     vector<Lesson> sortedLessons = lessons;}
+\DoxyCodeLine{00163     \textcolor{keyword}{auto} customComparator = [](\mbox{\hyperlink{classLesson}{Lesson}} a, \mbox{\hyperlink{classLesson}{Lesson}} b) \{}
+\DoxyCodeLine{00164         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})a.getDay\_() < (int)b.getDay\_()) \{}
+\DoxyCodeLine{00165             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00166         \}}
+\DoxyCodeLine{00167         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})a.getDay\_() == (int)b.getDay\_()) \{}
+\DoxyCodeLine{00168             \textcolor{keywordflow}{return} a.getStartHour() < b.getStartHour();}
+\DoxyCodeLine{00169         \}}
+\DoxyCodeLine{00170         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00171     \};}
+\DoxyCodeLine{00172     sort(sortedLessons.begin(), sortedLessons.end(), customComparator);}
+\DoxyCodeLine{00173     \textcolor{keywordflow}{return} sortedLessons;}
+\DoxyCodeLine{00174 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classReadFiles_ae2788a9a27c7e2fe4f10b746d58412b4}\label{classReadFiles_ae2788a9a27c7e2fe4f10b746d58412b4}} 
+\index{ReadFiles@{ReadFiles}!students\_classes\_reader@{students\_classes\_reader}}
+\index{students\_classes\_reader@{students\_classes\_reader}!ReadFiles@{ReadFiles}}
+\doxysubsubsection{\texorpdfstring{students\_classes\_reader()}{students\_classes\_reader()}}
+{\footnotesize\ttfamily void Read\+Files\+::students\+\_\+classes\+\_\+reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function reads the csv file that provides the information about the students. 
+
+
+
+Definition at line \mbox{\hyperlink{ReadFiles_8cpp_source_l00075}{75}} of file \mbox{\hyperlink{ReadFiles_8cpp_source}{Read\+Files.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075                                         \{}
+\DoxyCodeLine{00076     \textcolor{keywordtype}{string} line, up, name, uc, classcode;}
+\DoxyCodeLine{00077     ifstream in(\textcolor{stringliteral}{"{}../schedule/students\_classes.csv"{}});}
+\DoxyCodeLine{00078     getline(in, line);}
+\DoxyCodeLine{00079     \mbox{\hyperlink{classStudent}{Student}} student(\textcolor{stringliteral}{"{}0"{}},\textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{00080     \textcolor{keywordtype}{int} j=0;}
+\DoxyCodeLine{00081     \textcolor{keywordflow}{while}(getline(in, line)) \{}
+\DoxyCodeLine{00082         stringstream iss(line);}
+\DoxyCodeLine{00083         getline(iss, up, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00084         getline(iss, name, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00085         getline(iss, uc, \textcolor{charliteral}{','});}
+\DoxyCodeLine{00086         getline(iss, classcode, \textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{00087         \mbox{\hyperlink{classStudent}{Student}} laststudent(up,name);}
+\DoxyCodeLine{00088         \textcolor{keyword}{auto} its = find(students.begin(), students.end(), laststudent);}
+\DoxyCodeLine{00089         \textcolor{keywordflow}{if}(its == students.end())\{}
+\DoxyCodeLine{00090             student = laststudent;}
+\DoxyCodeLine{00091             students.push\_back(student);}
+\DoxyCodeLine{00092             j++;}
+\DoxyCodeLine{00093         \}}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< ucS.size(); i++)\{}
+\DoxyCodeLine{00095             \textcolor{keywordflow}{if}(ucS[i].getUCname() == uc)\{}
+\DoxyCodeLine{00096                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} k=0; k<ucS[i].getLessons().size(); k++)\{}
+\DoxyCodeLine{00097                     \textcolor{keywordflow}{if}(ucS[i].getLessons()[k].getClasscode() == classcode)\{}
+\DoxyCodeLine{00098                         ucS[i].getLessons()[k].addStudent(student);}
+\DoxyCodeLine{00099                     \}}
+\DoxyCodeLine{00100                 \}}
+\DoxyCodeLine{00101                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00102             \}}
+\DoxyCodeLine{00103         \}}
+\DoxyCodeLine{00104         students.at(students.size()-\/1).addClass(uc, classcode);}
+\DoxyCodeLine{00105     \}}
+\DoxyCodeLine{00106     setYearStudents();}
+\DoxyCodeLine{00107 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Read\+Files.\+h\item 
+Read\+Files.\+cpp\end{DoxyCompactItemize}

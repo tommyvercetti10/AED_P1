@@ -1,0 +1,215 @@
+\hypertarget{classRequest}{}\doxysection{Request Class Reference}
+\label{classRequest}\index{Request@{Request}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRequest_a7f621c9d946c05d5b6cba79b71fb7fb9}\label{classRequest_a7f621c9d946c05d5b6cba79b71fb7fb9}} 
+{\bfseries Request} (string type\+\_\+)
+\item 
+\mbox{\hyperlink{classRequest_af8fbb2d348c86974d7f9e95c0b6c11ed}{Request}} (\mbox{\hyperlink{classClass}{Class}} old, \mbox{\hyperlink{classClass}{Class}} new\+\_\+, \mbox{\hyperlink{classStudent}{Student}} student\+\_\+, string uc\+\_\+, string type\+\_\+)
+\item 
+\mbox{\Hypertarget{classRequest_a644ee3ecd20a5bba22e1c6e26db6e5cc}\label{classRequest_a644ee3ecd20a5bba22e1c6e26db6e5cc}} 
+{\bfseries Request} (\mbox{\hyperlink{classUC}{UC}} new\+\_\+, \mbox{\hyperlink{classClass}{Class}} new\+Class\+\_\+, \mbox{\hyperlink{classStudent}{Student}} student\+\_\+, string type\+\_\+)
+\item 
+\mbox{\Hypertarget{classRequest_a97601cee522b4fd746ba12307cd498e2}\label{classRequest_a97601cee522b4fd746ba12307cd498e2}} 
+{\bfseries Request} (\mbox{\hyperlink{classClass}{Class}} old\+Class\+\_\+, \mbox{\hyperlink{classUC}{UC}} old\+\_\+, \mbox{\hyperlink{classStudent}{Student}} student\+\_\+, string type\+\_\+)
+\item 
+\mbox{\Hypertarget{classRequest_a7f775024e16e160b2263395cbf9133fd}\label{classRequest_a7f775024e16e160b2263395cbf9133fd}} 
+{\bfseries Request} (\mbox{\hyperlink{classUC}{UC}} old, \mbox{\hyperlink{classUC}{UC}} new\+\_\+, \mbox{\hyperlink{classClass}{Class}} old\+Class\+\_\+, \mbox{\hyperlink{classClass}{Class}} new\+Class\+\_\+, \mbox{\hyperlink{classStudent}{Student}} student\+\_\+, string type\+\_\+)
+\item 
+\mbox{\hyperlink{classClass}{Class}} \& \mbox{\hyperlink{classRequest_af3cc69ed24669e5e13bd92abb15f53c4}{get\+Old\+Class}} ()
+\item 
+\mbox{\hyperlink{classClass}{Class}} \& \mbox{\hyperlink{classRequest_a8eb1aca4215ca260647779eeac19cd94}{get\+New\+Class}} ()
+\item 
+\mbox{\hyperlink{classUC}{UC}} \& \mbox{\hyperlink{classRequest_a99de0f2a6c277b9a411ec66940bb202c}{get\+Old\+UC}} ()
+\item 
+\mbox{\hyperlink{classUC}{UC}} \& \mbox{\hyperlink{classRequest_a30242c5b8f341ab5b1d774b835cb2bdb}{get\+New\+UC}} ()
+\item 
+\mbox{\hyperlink{classStudent}{Student}} \& \mbox{\hyperlink{classRequest_a4c29ae265475bdc9480a8774e3f59880}{get\+Student}} ()
+\item 
+string \& \mbox{\hyperlink{classRequest_aa4721ca85f29a0a5f047b4891bc56655}{get\+Uc}} ()
+\item 
+string \mbox{\hyperlink{classRequest_a7c5d661f8a200a8fd5e03945d82678ec}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{classRequest_a3191f4b01738d554cb51b60659e032d6}{add\+To\+Log}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Request_8h_source_l00012}{12}} of file \mbox{\hyperlink{Request_8h_source}{Request.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRequest_af8fbb2d348c86974d7f9e95c0b6c11ed}\label{classRequest_af8fbb2d348c86974d7f9e95c0b6c11ed}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classClass}{Class}}}]{old,  }\item[{\mbox{\hyperlink{classClass}{Class}}}]{new\+\_\+,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student\+\_\+,  }\item[{string}]{uc\+\_\+,  }\item[{string}]{type\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009                                                                                   :}
+\DoxyCodeLine{00010 oldClass(old), newClass(new\_), student(student\_), uc(uc\_), type(type\_) \{}
+\DoxyCodeLine{00011 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequest_a3191f4b01738d554cb51b60659e032d6}\label{classRequest_a3191f4b01738d554cb51b60659e032d6}} 
+\index{Request@{Request}!addToLog@{addToLog}}
+\index{addToLog@{addToLog}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{addToLog()}{addToLog()}}
+{\footnotesize\ttfamily void Request\+::add\+To\+Log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Adds the change log to the log file, containing the type of change and essential information for easy reference and in case changes need to be discarded 
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028                        \{}
+\DoxyCodeLine{00029     ofstream log;}
+\DoxyCodeLine{00030     log.open(\textcolor{stringliteral}{"{}../log.txt"{}}, std::ios::app);}
+\DoxyCodeLine{00031     log << type + \textcolor{charliteral}{'-\/'} + student.getUp() + \textcolor{charliteral}{'-\/'};}
+\DoxyCodeLine{00032     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}ClassChange"{}}) log << uc + \textcolor{charliteral}{'-\/'} + oldClass.getClassCode() + \textcolor{charliteral}{'-\/'} + newClass.getClassCode() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00033     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCAdd"{}}) log << uc + \textcolor{charliteral}{'-\/'} + newClass.getClassCode() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCRemove"{}}) log << oldUC.getUCname() + \textcolor{charliteral}{'-\/'} + oldClass.getClassCode() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00035     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}UCChange"{}}) log << oldUC.getUCname() + \textcolor{charliteral}{'-\/'} + oldClass.getClassCode() + \textcolor{charliteral}{'-\/'}}
+\DoxyCodeLine{00036                             + newUC.getUCname() + \textcolor{charliteral}{'-\/'} + newClass.getClassCode() << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{00037     log.close();}
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_a8eb1aca4215ca260647779eeac19cd94}\label{classRequest_a8eb1aca4215ca260647779eeac19cd94}} 
+\index{Request@{Request}!getNewClass@{getNewClass}}
+\index{getNewClass@{getNewClass}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getNewClass()}{getNewClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classClass}{Class}} \& Request\+::get\+New\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00044}{44}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044                            \{}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} newClass;}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_a30242c5b8f341ab5b1d774b835cb2bdb}\label{classRequest_a30242c5b8f341ab5b1d774b835cb2bdb}} 
+\index{Request@{Request}!getNewUC@{getNewUC}}
+\index{getNewUC@{getNewUC}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getNewUC()}{getNewUC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUC}{UC}} \& Request\+::get\+New\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064                       \{}
+\DoxyCodeLine{00065     \textcolor{keywordflow}{return} newUC;}
+\DoxyCodeLine{00066 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_af3cc69ed24669e5e13bd92abb15f53c4}\label{classRequest_af3cc69ed24669e5e13bd92abb15f53c4}} 
+\index{Request@{Request}!getOldClass@{getOldClass}}
+\index{getOldClass@{getOldClass}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getOldClass()}{getOldClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classClass}{Class}} \& Request\+::get\+Old\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040                            \{}
+\DoxyCodeLine{00041     \textcolor{keywordflow}{return} oldClass;}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_a99de0f2a6c277b9a411ec66940bb202c}\label{classRequest_a99de0f2a6c277b9a411ec66940bb202c}} 
+\index{Request@{Request}!getOldUC@{getOldUC}}
+\index{getOldUC@{getOldUC}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getOldUC()}{getOldUC()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUC}{UC}} \& Request\+::get\+Old\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                       \{}
+\DoxyCodeLine{00061     \textcolor{keywordflow}{return} oldUC;}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_a4c29ae265475bdc9480a8774e3f59880}\label{classRequest_a4c29ae265475bdc9480a8774e3f59880}} 
+\index{Request@{Request}!getStudent@{getStudent}}
+\index{getStudent@{getStudent}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getStudent()}{getStudent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStudent}{Student}} \& Request\+::get\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048                             \{}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{return} student;}
+\DoxyCodeLine{00050 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_a7c5d661f8a200a8fd5e03945d82678ec}\label{classRequest_a7c5d661f8a200a8fd5e03945d82678ec}} 
+\index{Request@{Request}!getType@{getType}}
+\index{getType@{getType}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Request\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056                         \{}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{return} type;}
+\DoxyCodeLine{00058 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRequest_aa4721ca85f29a0a5f047b4891bc56655}\label{classRequest_aa4721ca85f29a0a5f047b4891bc56655}} 
+\index{Request@{Request}!getUc@{getUc}}
+\index{getUc@{getUc}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getUc()}{getUc()}}
+{\footnotesize\ttfamily string \& Request\+::get\+Uc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Request_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{Request_8cpp_source}{Request.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052                       \{}
+\DoxyCodeLine{00053     \textcolor{keywordflow}{return} uc;}
+\DoxyCodeLine{00054 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Request.\+h\item 
+Request.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,293 @@
+\hypertarget{classUC}{}\doxysection{UC Class Reference}
+\label{classUC}\index{UC@{UC}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUC_abd62583eaaa1ec29908b8d0bf662b71b}{UC}} (std\+::string UCname)
+\item 
+\mbox{\Hypertarget{classUC_a616b02b1d602332881f96bd26db8aff7}\label{classUC_a616b02b1d602332881f96bd26db8aff7}} 
+void {\bfseries get\+Schedule} ()
+\item 
+void \mbox{\hyperlink{classUC_aa26daab97a68cebb9c54806f3d7814d7}{add\+Lesson}} (string class\+Code, string uc\+Code, string type, string weekday, double duration, double start\+Hour)
+\item 
+\mbox{\Hypertarget{classUC_a59cdc8b522c8f8c051668ad1fbcaf841}\label{classUC_a59cdc8b522c8f8c051668ad1fbcaf841}} 
+bool {\bfseries custom\+Comparator} (\mbox{\hyperlink{classLesson}{Lesson}} a, \mbox{\hyperlink{classLesson}{Lesson}} b)
+\item 
+string \mbox{\hyperlink{classUC_a36dd327cf0d8b15d89b531da22bb5cbe}{get\+UCname}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \& \mbox{\hyperlink{classUC_a1658bd391e7eac9c149214e99ad50b0e}{get\+Lessons}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \mbox{\hyperlink{classUC_a0a653833b7853f286c647616e78cbe04}{get\+Lessons}} (string lesson\+Name)
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \mbox{\hyperlink{classUC_ab0d0f580fcc2c78cb6e779789aee6cba}{get\+Lessonsby\+Day}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \mbox{\hyperlink{classUC_a3390c7496d72cc8bfaa4d03207bcd3b7}{get\+Lessonsby\+Day}} (vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \&lessons\+\_\+)
+\item 
+int \mbox{\hyperlink{classUC_a6dd3c4b1ba3881ace7c801fecf229c5d}{get\+Year}} ()
+\item 
+void \mbox{\hyperlink{classUC_a6542bc0483f3132e3130e40e7789a37a}{remove\+Student}} (string class\+Code, \mbox{\hyperlink{classStudent}{Student}} student)
+\item 
+void \mbox{\hyperlink{classUC_a547746401eb8c9c3c50c953225124f2a}{add\+Student}} (string class\+Code, \mbox{\hyperlink{classStudent}{Student}} student)
+\item 
+double \mbox{\hyperlink{classUC_a5699b2ea8db584d5fb4cef1ea4a9d101}{UChours}} ()
+\item 
+bool \mbox{\hyperlink{classUC_a0429930376795164702e584e2f10b619}{operator==}} (const \mbox{\hyperlink{classUC}{UC}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{UC_8h_source_l00013}{13}} of file \mbox{\hyperlink{UC_8h_source}{UC.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUC_abd62583eaaa1ec29908b8d0bf662b71b}\label{classUC_abd62583eaaa1ec29908b8d0bf662b71b}} 
+\index{UC@{UC}!UC@{UC}}
+\index{UC@{UC}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{UC()}{UC()}}
+{\footnotesize\ttfamily UC\+::\+UC (\begin{DoxyParamCaption}\item[{std\+::string}]{UCname }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011                       \{}
+\DoxyCodeLine{00012     this-\/>UCname = UCname;}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUC_aa26daab97a68cebb9c54806f3d7814d7}\label{classUC_aa26daab97a68cebb9c54806f3d7814d7}} 
+\index{UC@{UC}!addLesson@{addLesson}}
+\index{addLesson@{addLesson}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{addLesson()}{addLesson()}}
+{\footnotesize\ttfamily void UC\+::add\+Lesson (\begin{DoxyParamCaption}\item[{string}]{class\+Code,  }\item[{string}]{uc\+Code,  }\item[{string}]{type,  }\item[{string}]{weekday,  }\item[{double}]{duration,  }\item[{double}]{start\+Hour }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040                                                                                                                   \{}
+\DoxyCodeLine{00041     lessons.push\_back(\mbox{\hyperlink{classLesson}{Lesson}}(classCode, ucCode, type, weekday, duration, startHour));}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a547746401eb8c9c3c50c953225124f2a}\label{classUC_a547746401eb8c9c3c50c953225124f2a}} 
+\index{UC@{UC}!addStudent@{addStudent}}
+\index{addStudent@{addStudent}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{addStudent()}{addStudent()}}
+{\footnotesize\ttfamily void UC\+::add\+Student (\begin{DoxyParamCaption}\item[{string}]{class\+Code,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078                                                         \{}
+\DoxyCodeLine{00079     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lessons.size(); i++) \{}
+\DoxyCodeLine{00080         \textcolor{keywordflow}{if} (lessons[i].getClasscode() == classCode) \{}
+\DoxyCodeLine{00081             lessons[i].addStudent(student);}
+\DoxyCodeLine{00082         \}}
+\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a1658bd391e7eac9c149214e99ad50b0e}\label{classUC_a1658bd391e7eac9c149214e99ad50b0e}} 
+\index{UC@{UC}!getLessons@{getLessons}}
+\index{getLessons@{getLessons}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getLessons()}{getLessons()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \& UC\+::get\+Lessons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051                                  \{}
+\DoxyCodeLine{00052     \textcolor{keywordflow}{return} this-\/>lessons;}
+\DoxyCodeLine{00053 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a0a653833b7853f286c647616e78cbe04}\label{classUC_a0a653833b7853f286c647616e78cbe04}} 
+\index{UC@{UC}!getLessons@{getLessons}}
+\index{getLessons@{getLessons}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getLessons()}{getLessons()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ UC\+::get\+Lessons (\begin{DoxyParamCaption}\item[{string}]{lesson\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063                                                \{}
+\DoxyCodeLine{00064     vector<Lesson> lessons\_;}
+\DoxyCodeLine{00065     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lessons.size(); i++) \{}
+\DoxyCodeLine{00066         \textcolor{keywordflow}{if} (lessons[i].getClasscode() == lessonName) lessons\_.push\_back(lessons[i]);}
+\DoxyCodeLine{00067     \}}
+\DoxyCodeLine{00068     \textcolor{keywordflow}{return} getLessonsbyDay(lessons\_);}
+\DoxyCodeLine{00069 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_ab0d0f580fcc2c78cb6e779789aee6cba}\label{classUC_ab0d0f580fcc2c78cb6e779789aee6cba}} 
+\index{UC@{UC}!getLessonsbyDay@{getLessonsbyDay}}
+\index{getLessonsbyDay@{getLessonsbyDay}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getLessonsbyDay()}{getLessonsbyDay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ UC\+::get\+Lessonsby\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015                                    \{}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{return} getLessonsbyDay(lessons);}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a3390c7496d72cc8bfaa4d03207bcd3b7}\label{classUC_a3390c7496d72cc8bfaa4d03207bcd3b7}} 
+\index{UC@{UC}!getLessonsbyDay@{getLessonsbyDay}}
+\index{getLessonsbyDay@{getLessonsbyDay}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getLessonsbyDay()}{getLessonsbyDay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ UC\+::get\+Lessonsby\+Day (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classLesson}{Lesson}} $>$ \&}]{lessons\+\_\+ }\end{DoxyParamCaption})}
+
+Sorts \mbox{\hyperlink{classUC}{UC}} lessons by day using a customised comparator 
+\begin{DoxyParams}{Parameters}
+{\em lessons\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Chronologically ordered lessons 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025                                                            \{}
+\DoxyCodeLine{00026     vector<Lesson> sortedLessons = lessons\_;}
+\DoxyCodeLine{00027     \textcolor{keyword}{auto} customComparator = [](\mbox{\hyperlink{classLesson}{Lesson}} a, \mbox{\hyperlink{classLesson}{Lesson}} b) \{}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})a.getDay\_() < (int)b.getDay\_()) \{}
+\DoxyCodeLine{00029             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00030         \}}
+\DoxyCodeLine{00031         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{int})a.getDay\_() == (int)b.getDay\_()) \{}
+\DoxyCodeLine{00032             \textcolor{keywordflow}{return} a.getStartHour() < b.getStartHour();}
+\DoxyCodeLine{00033         \}}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00035     \};}
+\DoxyCodeLine{00036     sort(sortedLessons.begin(), sortedLessons.end(), customComparator);}
+\DoxyCodeLine{00037     \textcolor{keywordflow}{return} sortedLessons;}
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a36dd327cf0d8b15d89b531da22bb5cbe}\label{classUC_a36dd327cf0d8b15d89b531da22bb5cbe}} 
+\index{UC@{UC}!getUCname@{getUCname}}
+\index{getUCname@{getUCname}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getUCname()}{getUCname()}}
+{\footnotesize\ttfamily string UC\+::get\+UCname (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                     \{}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{return} this-\/>UCname;}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a6dd3c4b1ba3881ace7c801fecf229c5d}\label{classUC_a6dd3c4b1ba3881ace7c801fecf229c5d}} 
+\index{UC@{UC}!getYear@{getYear}}
+\index{getYear@{getYear}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily int UC\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086                 \{}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{string} year = lessons[0].getClasscode().substr(0, 1);}
+\DoxyCodeLine{00088     \textcolor{keywordflow}{return} stoi(year);}
+\DoxyCodeLine{00089 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a0429930376795164702e584e2f10b619}\label{classUC_a0429930376795164702e584e2f10b619}} 
+\index{UC@{UC}!operator==@{operator==}}
+\index{operator==@{operator==}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool UC\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classUC}{UC}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047                                           \{}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} (UCname == other.UCname);}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a6542bc0483f3132e3130e40e7789a37a}\label{classUC_a6542bc0483f3132e3130e40e7789a37a}} 
+\index{UC@{UC}!removeStudent@{removeStudent}}
+\index{removeStudent@{removeStudent}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{removeStudent()}{removeStudent()}}
+{\footnotesize\ttfamily void UC\+::remove\+Student (\begin{DoxyParamCaption}\item[{string}]{class\+Code,  }\item[{\mbox{\hyperlink{classStudent}{Student}}}]{student }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071                                                            \{}
+\DoxyCodeLine{00072     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < lessons.size(); i++) \{}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{if} (lessons[i].getClasscode() == classCode)}
+\DoxyCodeLine{00074             lessons[i].removeStudent(student);}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classUC_a5699b2ea8db584d5fb4cef1ea4a9d101}\label{classUC_a5699b2ea8db584d5fb4cef1ea4a9d101}} 
+\index{UC@{UC}!UChours@{UChours}}
+\index{UChours@{UChours}!UC@{UC}}
+\doxysubsubsection{\texorpdfstring{UChours()}{UChours()}}
+{\footnotesize\ttfamily double UC\+::\+UChours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{UC_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{UC_8cpp_source}{UC.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055                    \{}
+\DoxyCodeLine{00056     \textcolor{keywordtype}{double} counter= 0;}
+\DoxyCodeLine{00057     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i= 0; i < lessons.size(); i++) \{}
+\DoxyCodeLine{00058         counter += lessons[i].getDuration();}
+\DoxyCodeLine{00059     \}}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{return} counter;}
+\DoxyCodeLine{00061 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UC.\+h\item 
+UC.\+cpp\end{DoxyCompactItemize}

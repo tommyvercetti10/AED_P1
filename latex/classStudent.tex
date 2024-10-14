@@ -1,0 +1,225 @@
+\hypertarget{classStudent}{}\doxysection{Student Class Reference}
+\label{classStudent}\index{Student@{Student}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStudent_aeb237d98a3b7eebc02dccb24472a249b}{Student}} (std\+::string up, std\+::string name)
+\item 
+void \mbox{\hyperlink{classStudent_acdfb49b366a1209a231767780b7a8302}{add\+Class}} (string uc, string classcode)
+\item 
+void \mbox{\hyperlink{classStudent_a3ac7fa3799fa1fbb5beb397db0843ca4}{remove\+Class}} (string uc)
+\item 
+string \mbox{\hyperlink{classStudent_a669e4161d64e8a7d516f240df2d7884e}{get\+Up}} ()
+\item 
+string \mbox{\hyperlink{classStudent_a729c900a0e95c46f90668f527a72ad34}{get\+Name}} ()
+\item 
+vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{classStudent_a167588ec80b8193654ec7837766b3310}{get\+Student\+\_\+classes}} ()
+\item 
+void \mbox{\hyperlink{classStudent_aba1cd489a65191f4da210ab037d77080}{set\+Year}} ()
+\item 
+int \mbox{\hyperlink{classStudent_ad6d25d1658f6eb677b7648de8405702d}{get\+Year}} ()
+\item 
+int \mbox{\hyperlink{classStudent_aaba7646a45d644cf68942f30b4869350}{get\+Ucs\+Number}} ()
+\item 
+bool \mbox{\hyperlink{classStudent_a8f7c31ed0e331481ac58f12b2e822047}{operator==}} (const \mbox{\hyperlink{classStudent}{Student}} \&other) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{Student_8h_source_l00012}{12}} of file \mbox{\hyperlink{Student_8h_source}{Student.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStudent_aeb237d98a3b7eebc02dccb24472a249b}\label{classStudent_aeb237d98a3b7eebc02dccb24472a249b}} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{std\+::string}]{up,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026                                              \{}
+\DoxyCodeLine{00027     this-\/>up = up;}
+\DoxyCodeLine{00028     this-\/>name= name;}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStudent_acdfb49b366a1209a231767780b7a8302}\label{classStudent_acdfb49b366a1209a231767780b7a8302}} 
+\index{Student@{Student}!addClass@{addClass}}
+\index{addClass@{addClass}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{addClass()}{addClass()}}
+{\footnotesize\ttfamily void Student\+::add\+Class (\begin{DoxyParamCaption}\item[{string}]{uc,  }\item[{string}]{classcode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                                  \{}
+\DoxyCodeLine{00009     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00010         \textcolor{keywordflow}{if} (student\_classes[i].first == uc) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00011     \}}
+\DoxyCodeLine{00012     student\_classes.push\_back(make\_pair(uc, classcode));}
+\DoxyCodeLine{00013     ucs++;}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_a729c900a0e95c46f90668f527a72ad34}\label{classStudent_a729c900a0e95c46f90668f527a72ad34}} 
+\index{Student@{Student}!getName@{getName}}
+\index{getName@{getName}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Student\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                            \{}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00037 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_a167588ec80b8193654ec7837766b3310}\label{classStudent_a167588ec80b8193654ec7837766b3310}} 
+\index{Student@{Student}!getStudent\_classes@{getStudent\_classes}}
+\index{getStudent\_classes@{getStudent\_classes}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getStudent\_classes()}{getStudent\_classes()}}
+{\footnotesize\ttfamily std\+::vector$<$ pair$<$ string, string $>$ $>$ Student\+::get\+Student\+\_\+classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039                                                           \{}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} this-\/>student\_classes;}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_aaba7646a45d644cf68942f30b4869350}\label{classStudent_aaba7646a45d644cf68942f30b4869350}} 
+\index{Student@{Student}!getUcsNumber@{getUcsNumber}}
+\index{getUcsNumber@{getUcsNumber}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getUcsNumber()}{getUcsNumber()}}
+{\footnotesize\ttfamily int Student\+::get\+Ucs\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00053}{53}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053 \{ \textcolor{keywordflow}{return} this-\/>ucs; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_a669e4161d64e8a7d516f240df2d7884e}\label{classStudent_a669e4161d64e8a7d516f240df2d7884e}} 
+\index{Student@{Student}!getUp@{getUp}}
+\index{getUp@{getUp}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getUp()}{getUp()}}
+{\footnotesize\ttfamily std\+::string Student\+::get\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031                          \{}
+\DoxyCodeLine{00032     \textcolor{keywordflow}{return} this-\/>up;}
+\DoxyCodeLine{00033 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_ad6d25d1658f6eb677b7648de8405702d}\label{classStudent_ad6d25d1658f6eb677b7648de8405702d}} 
+\index{Student@{Student}!getYear@{getYear}}
+\index{getYear@{getYear}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily int Student\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051 \{ \textcolor{keywordflow}{return} this-\/>year;\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_a8f7c31ed0e331481ac58f12b2e822047}\label{classStudent_a8f7c31ed0e331481ac58f12b2e822047}} 
+\index{Student@{Student}!operator==@{operator==}}
+\index{operator==@{operator==}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Student\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStudent}{Student}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055                                                   \{}
+\DoxyCodeLine{00056     \textcolor{keywordflow}{return}(up == other.up);}
+\DoxyCodeLine{00057 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_a3ac7fa3799fa1fbb5beb397db0843ca4}\label{classStudent_a3ac7fa3799fa1fbb5beb397db0843ca4}} 
+\index{Student@{Student}!removeClass@{removeClass}}
+\index{removeClass@{removeClass}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{removeClass()}{removeClass()}}
+{\footnotesize\ttfamily void Student\+::remove\+Class (\begin{DoxyParamCaption}\item[{string}]{uc }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016                                       \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{if} (student\_classes[i].first == uc)}
+\DoxyCodeLine{00019         \{}
+\DoxyCodeLine{00020             student\_classes.erase(student\_classes.begin() + i);}
+\DoxyCodeLine{00021             ucs-\/-\/;}
+\DoxyCodeLine{00022         \}}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStudent_aba1cd489a65191f4da210ab037d77080}\label{classStudent_aba1cd489a65191f4da210ab037d77080}} 
+\index{Student@{Student}!setYear@{setYear}}
+\index{setYear@{setYear}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{setYear()}{setYear()}}
+{\footnotesize\ttfamily void Student\+::set\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{Student_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{Student_8cpp_source}{Student.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00043                       \{}
+\DoxyCodeLine{00044     \textcolor{keywordtype}{int} y = 0;}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < student\_classes.size(); i++) \{}
+\DoxyCodeLine{00046         y = student\_classes[i].second[0] -\/ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{00047     \}}
+\DoxyCodeLine{00048     year = y;}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Student.\+h\item 
+Student.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{Request_8h_source}{}\doxysection{Request.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00002}00002 \textcolor{comment}{// Created by Diogo Sousa on 04/11/2023.}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef UNTITLED\_REQUEST\_H}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00006}00006 \textcolor{preprocessor}{\#define UNTITLED\_REQUEST\_H}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}Class.h"{}}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00010}00010 \textcolor{preprocessor}{\#include "{}UC.h"{}}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00012}\mbox{\hyperlink{classRequest}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{classRequest}{Request}} \{}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00013}00013     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00014}00014         \mbox{\hyperlink{classClass}{Class}} oldClass = \mbox{\hyperlink{classClass}{Class}}(\textcolor{stringliteral}{"{}1"{}}, 0);}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00015}00015         \mbox{\hyperlink{classClass}{Class}} newClass = \mbox{\hyperlink{classClass}{Class}}(\textcolor{stringliteral}{"{}1"{}}, 0);}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00016}00016         \mbox{\hyperlink{classUC}{UC}} oldUC = \mbox{\hyperlink{classUC}{UC}}(\textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00017}00017         \mbox{\hyperlink{classUC}{UC}} newUC = \mbox{\hyperlink{classUC}{UC}}(\textcolor{stringliteral}{"{}0"{}});}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00018}00018         \mbox{\hyperlink{classStudent}{Student}} student = \mbox{\hyperlink{classStudent}{Student}}(\textcolor{stringliteral}{"{}"{}}, \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00019}00019         \textcolor{keywordtype}{string} uc;}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00020}00020         \textcolor{keywordtype}{string} type;}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00021}00021     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00022}00022         \mbox{\hyperlink{classRequest}{Request}}(\textcolor{keywordtype}{string} type\_);}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00023}00023         \mbox{\hyperlink{classRequest}{Request}}(\mbox{\hyperlink{classClass}{Class}} old, \mbox{\hyperlink{classClass}{Class}} new\_, \mbox{\hyperlink{classStudent}{Student}} student\_, \textcolor{keywordtype}{string} uc\_, \textcolor{keywordtype}{string} type\_); \textcolor{comment}{// Class change}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00024}00024         \mbox{\hyperlink{classRequest}{Request}}(\mbox{\hyperlink{classUC}{UC}} new\_, \mbox{\hyperlink{classClass}{Class}} newClass\_, \mbox{\hyperlink{classStudent}{Student}} student\_, \textcolor{keywordtype}{string} type\_); \textcolor{comment}{// UC add}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00025}00025         \mbox{\hyperlink{classRequest}{Request}}(\mbox{\hyperlink{classClass}{Class}} oldClass\_, \mbox{\hyperlink{classUC}{UC}} old\_, \mbox{\hyperlink{classStudent}{Student}} student\_, \textcolor{keywordtype}{string} type\_); \textcolor{comment}{// UC remove}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00026}00026         \mbox{\hyperlink{classRequest}{Request}}(\mbox{\hyperlink{classUC}{UC}} old, \mbox{\hyperlink{classUC}{UC}} new\_, \mbox{\hyperlink{classClass}{Class}} oldClass\_, \mbox{\hyperlink{classClass}{Class}} newClass\_, \mbox{\hyperlink{classStudent}{Student}} student\_, \textcolor{keywordtype}{string} type\_); \textcolor{comment}{// UC change}}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00027}00027         \mbox{\hyperlink{classClass}{Class}}\& getOldClass();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00028}00028         \mbox{\hyperlink{classClass}{Class}}\& getNewClass();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00029}00029         \mbox{\hyperlink{classUC}{UC}}\& getOldUC();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00030}00030         \mbox{\hyperlink{classUC}{UC}}\& getNewUC();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00031}00031         \mbox{\hyperlink{classStudent}{Student}}\& getStudent();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00032}00032         \textcolor{keywordtype}{string}\& getUc();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00033}00033         \textcolor{keywordtype}{string} getType();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00034}00034         \textcolor{keywordtype}{void} \mbox{\hyperlink{classRequest_a3191f4b01738d554cb51b60659e032d6}{addToLog}}();}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00036}00036 \};}
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{Request_8h_source_l00039}00039 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_REQUEST\_H}}
+
+\end{DoxyCode}

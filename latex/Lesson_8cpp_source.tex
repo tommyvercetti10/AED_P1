@@ -1,0 +1,122 @@
+\hypertarget{Lesson_8cpp_source}{}\doxysection{Lesson.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00002}00002 \textcolor{comment}{// Created by Diogo Sousa on 25/10/2023.}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include "{}Lesson.h"{}}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00008}00008 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00010}00010 Lesson::Lesson(\textcolor{keywordtype}{string} classCode) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00011}00011     this-\/>classCode = classCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00012}00012 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00014}00014 Lesson::Lesson(\textcolor{keywordtype}{string} classCode, \textcolor{keywordtype}{string} ucCode, \textcolor{keywordtype}{string} type, \textcolor{keywordtype}{string} weekday, \textcolor{keywordtype}{double} duration, \textcolor{keywordtype}{double} startHour) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00015}00015     this-\/>classCode = classCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00016}00016     this-\/>ucCode = ucCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00017}00017     this-\/>type = type;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00018}00018     setDay(weekday);}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00019}00019     this-\/>Duration = duration;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00020}00020     this-\/>StartHour = startHour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00021}00021     setEndHour();}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00022}00022 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00024}00024 \textcolor{keywordtype}{void} Lesson::printCode() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00025}00025     cout << this-\/>classCode << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00026}00026 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00028}00028 week Lesson::convert(\textcolor{keywordtype}{string} day) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00029}00029     \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Monday"{}}) \textcolor{keywordflow}{return} Monday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00030}00030     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Thursday"{}}) \textcolor{keywordflow}{return} Thursday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00031}00031     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Wednesday"{}}) \textcolor{keywordflow}{return} Wednesday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00032}00032     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Tuesday"{}}) \textcolor{keywordflow}{return} Tuesday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00033}00033     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Friday"{}}) \textcolor{keywordflow}{return} Friday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00034}00034     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Saturday"{}}) \textcolor{keywordflow}{return} Saturday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00035}00035     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(day == \textcolor{stringliteral}{"{}Sunday"{}}) \textcolor{keywordflow}{return} Sunday;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00036}00036 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00038}00038 \textcolor{keywordtype}{void} Lesson::setDay(\textcolor{keywordtype}{string} day) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00039}00039     this-\/>day = day;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00040}00040     this-\/>day\_ = convert(day);}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00041}00041 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00043}00043 \textcolor{keywordtype}{string} Lesson::getDay() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00044}00044     \textcolor{keywordflow}{return} this-\/>day;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00045}00045 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00047}00047 week Lesson::getDay\_() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00048}00048     \textcolor{keywordflow}{return} this-\/>day\_;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00051}00051 \textcolor{keywordtype}{void} Lesson::setType(\textcolor{keywordtype}{string} type) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00052}00052     this-\/>type = type;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00055}00055 \textcolor{keywordtype}{string} Lesson::getType() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00056}00056     \textcolor{keywordflow}{return} this-\/>type;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00057}00057 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00059}00059 \textcolor{keywordtype}{void} Lesson::setDuration(\textcolor{keywordtype}{double} duration) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00060}00060     this-\/>Duration = duration;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00061}00061 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00063}00063 \textcolor{keywordtype}{double} Lesson::getDuration() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00064}00064     \textcolor{keywordflow}{return} this-\/>Duration;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00065}00065 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00067}00067 \textcolor{keywordtype}{void} Lesson::setStartHour(\textcolor{keywordtype}{double} starthour) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00068}00068     this-\/>StartHour = starthour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00069}00069 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00071}00071 \textcolor{keywordtype}{double} Lesson::getStartHour() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00072}00072     \textcolor{keywordflow}{return} this-\/>StartHour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00073}00073 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00075}00075 \textcolor{keywordtype}{void} Lesson::setEndHour() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00076}00076     this-\/>endHour = StartHour + Duration;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00077}00077 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00079}00079 \textcolor{keywordtype}{double} Lesson::getEndHour() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00080}00080     \textcolor{keywordflow}{return} this-\/>endHour;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00081}00081 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00083}00083 \textcolor{keywordtype}{string} Lesson::getClasscode()\{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00084}00084     \textcolor{keywordflow}{return} classCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00085}00085 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00087}00087 \textcolor{keywordtype}{string} Lesson::getUcCode() \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00088}00088     \textcolor{keywordflow}{return} ucCode;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00089}00089 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00091}00091 vector<Student>\& Lesson::getStudents()\{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00092}00092     \textcolor{keywordflow}{return} students;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00093}00093 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00095}00095 \textcolor{keywordtype}{void} Lesson::addStudent(\mbox{\hyperlink{classStudent}{Student}} student) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00096}00096     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < students.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00097}00097         \textcolor{keywordflow}{if} (students[i].getName() == student.getName()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00099}00099     this-\/>students.push\_back(student);}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00100}00100     cap++;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00101}00101 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00103}00103 \textcolor{keywordtype}{void} Lesson::removeStudent(\mbox{\hyperlink{classStudent}{Student}} student) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00104}00104     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < students.size(); i++) \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00105}00105         \textcolor{keywordflow}{if} (students[i].getUp() == student.getUp())}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00106}00106         \{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00107}00107             students.erase(students.begin() + i);}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00108}00108             cap-\/-\/;}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00109}00109         \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00110}00110     \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00111}00111 \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00113}00113 \textcolor{keywordtype}{int} Lesson::getMaxCap() \{ \textcolor{keywordflow}{return} this-\/>maxCap; \}}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00115}00115 \textcolor{keywordtype}{bool} Lesson::operator== (\textcolor{keyword}{const} \mbox{\hyperlink{classLesson}{Lesson}}\& other)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00116}00116     \textcolor{keywordflow}{return} (classCode == other.classCode);}
+\DoxyCodeLine{\Hypertarget{Lesson_8cpp_source_l00117}00117 \}}
+
+\end{DoxyCode}

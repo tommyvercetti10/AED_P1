@@ -1,0 +1,42 @@
+\hypertarget{UC_8h_source}{}\doxysection{UC.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00001}00001 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00002}00002 \textcolor{comment}{// Created by Diogo Sousa on 25/10/2023.}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00003}00003 \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00005}00005 \textcolor{preprocessor}{\#ifndef UNTITLED\_UC\_H}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00006}00006 \textcolor{preprocessor}{\#define UNTITLED\_UC\_H}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00010}00010 \textcolor{preprocessor}{\#include "{}Lesson.h"{}}}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00011}00011 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00013}\mbox{\hyperlink{classUC}{00013}} \textcolor{keyword}{class }\mbox{\hyperlink{classUC}{UC}} \{}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00014}00014 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00015}00015     \textcolor{keywordtype}{string} UCname;}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00016}00016     vector<Lesson> lessons;}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00017}00017     \textcolor{keywordtype}{int} maxOccupation = 400;}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00018}00018 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00019}00019     \mbox{\hyperlink{classUC}{UC}}();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00020}00020     \mbox{\hyperlink{classUC}{UC}}(std::string UCname);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00021}00021     \textcolor{keywordtype}{void} getSchedule();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00022}00022     \textcolor{keywordtype}{void} addLesson(\textcolor{keywordtype}{string} classCode, \textcolor{keywordtype}{string} ucCode, \textcolor{keywordtype}{string} type, \textcolor{keywordtype}{string} weekday, \textcolor{keywordtype}{double} duration, \textcolor{keywordtype}{double} startHour);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00023}00023     \textcolor{keywordtype}{bool} customComparator(\mbox{\hyperlink{classLesson}{Lesson}} a, \mbox{\hyperlink{classLesson}{Lesson}} b);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00024}00024     \textcolor{keywordtype}{string} getUCname();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00025}00025     vector<Lesson>\& getLessons();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00026}00026     vector<Lesson> getLessons(\textcolor{keywordtype}{string} lessonName);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00027}00027     vector<Lesson> getLessonsbyDay();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00028}00028     vector<Lesson> getLessonsbyDay(vector<Lesson>\& lessons\_);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00029}00029     \textcolor{keywordtype}{int} getYear();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00030}00030     \textcolor{keywordtype}{void} removeStudent(\textcolor{keywordtype}{string} classCode, \mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00031}00031     \textcolor{keywordtype}{void} addStudent(\textcolor{keywordtype}{string} classCode, \mbox{\hyperlink{classStudent}{Student}} student);}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00032}00032     \textcolor{keywordtype}{double} UChours();}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00033}00033     \textcolor{keywordtype}{bool} operator== (\textcolor{keyword}{const} \mbox{\hyperlink{classUC}{UC}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00034}00034 \};}
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{UC_8h_source_l00037}00037 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_UC\_H}}
+
+\end{DoxyCode}
